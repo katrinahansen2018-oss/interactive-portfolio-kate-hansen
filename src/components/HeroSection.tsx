@@ -20,7 +20,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       <div className="hero-content animate-fade-in-up">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            [Your Name]
+            Kate Hansen
             <span className="block text-3xl md:text-4xl font-light mt-2 text-white/90">
               Instructional Designer
             </span>
