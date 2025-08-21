@@ -136,7 +136,7 @@
   }
   
   .hero-button {
-    @apply inline-flex items-center justify-center rounded-md font-semibold text-decoration-none transition-all duration-200 ease-in-out;
+    @apply inline-flex items-center justify-center rounded-md font-semibold no-underline transition-all duration-200 ease-in-out;
     background-color: hsl(var(--primary));
     color: #ffffff;
     padding: 1rem 2rem;
