@@ -140,7 +140,7 @@
   }
   
   .portfolio-card {
-    @apply bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300 group;
+    @apply bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
     box-shadow: var(--shadow-card);
   }
   
