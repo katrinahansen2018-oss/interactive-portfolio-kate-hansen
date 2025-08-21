@@ -37,7 +37,7 @@ const StickyNav = () => {
           onClick={() => scrollToSection('#hero')}
           className="text-xl font-bold text-foreground hover:text-primary transition-colors"
         >
-          [Your Name]
+          Kate Hansen
         </button>
 
         {/* Desktop Navigation */}
