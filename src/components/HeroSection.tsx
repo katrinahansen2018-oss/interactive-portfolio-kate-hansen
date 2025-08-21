@@ -25,7 +25,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       
       {/* Avatar Video */}
       <video
-        className="absolute top-8 left-8 w-20 h-20 rounded-full border-2 border-white object-cover z-10"
+        className="absolute top-24 left-16 w-32 h-32 rounded-full border-2 border-white object-cover z-20"
         autoPlay
         muted
         loop
