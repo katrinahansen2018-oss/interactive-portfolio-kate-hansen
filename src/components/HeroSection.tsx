@@ -34,7 +34,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         </p>
         
         <p className="hero-tagline">
-          Building inclusive learning experiences grounded in science and empathy.
+          Empowering adult learners through meaningful, engaging design.
         </p>
 
         {/* Button Group */}
