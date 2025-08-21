@@ -144,6 +144,7 @@
     border: none;
     cursor: pointer;
     focus-visible: outline-none;
+    min-width: 280px;
   }
   
   .hero-button:hover {
