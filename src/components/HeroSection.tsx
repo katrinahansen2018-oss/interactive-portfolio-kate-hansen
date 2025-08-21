@@ -23,6 +23,18 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       {/* Semi-transparent overlay */}
       <div className="hero-overlay" />
       
+      {/* Avatar Video */}
+      <video
+        className="absolute top-8 left-8 w-20 h-20 rounded-full border-2 border-white object-cover z-10"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      >
+        <source src="/avatar-video.mp4" type="video/mp4" />
+      </video>
+      
       {/* Content */}
       <div className="hero-content-new">
         <h1 className="hero-name">
