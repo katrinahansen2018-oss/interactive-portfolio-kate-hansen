@@ -41,12 +41,12 @@ const StickyNav = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="text-foreground hover:text-primary transition-colors font-medium focus-visible"
+              className="px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible min-w-[80px]"
             >
               {link.label}
             </button>
@@ -70,7 +70,7 @@ const StickyNav = () => {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 focus-visible"
+                  className="block w-full text-left px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible"
                 >
                   {link.label}
                 </button>
