@@ -1,5 +1,4 @@
 import { ArrowRight, Play } from 'lucide-react';
-import heroImage from '@/assets/hero-background.jpg';
 
 interface HeroSectionProps {
   onNavigateToProcess: () => void;
@@ -8,57 +7,57 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSectionProps) => {
   return (
-    <section id="hero" className="hero-section">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      <div className="hero-video-overlay" />
+    <section id="hero" className="hero-section-new">
+      {/* Background Video */}
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      >
+        <source src="/placeholder-video.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Semi-transparent overlay */}
+      <div className="hero-overlay" />
       
       {/* Content */}
-      <div className="hero-content animate-fade-in-up">
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Kate Hansen
-            <span className="block text-3xl md:text-4xl font-light mt-2 text-white/90">
-              E-Learning Developer
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Building inclusive learning experiences grounded in science and empathy.
-          </p>
-        </div>
+      <div className="hero-content-new">
+        <h1 className="hero-name">
+          Kate Hansen
+        </h1>
+        
+        <p className="hero-job-title">
+          E-Learning Developer
+        </p>
+        
+        <p className="hero-tagline">
+          Building inclusive learning experiences grounded in science and empathy.
+        </p>
 
-        {/* Interactive Branching Choices */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        {/* Button Group */}
+        <div className="hero-button-group">
           <button 
             onClick={onNavigateToProcess}
-            className="btn-hero group"
+            className="hero-button"
             aria-label="Explore my design process"
           >
-            <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+            <Play className="w-5 h-5 mr-3" />
             Explore my Design Process
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 ml-3" />
           </button>
           
           <button 
             onClick={onNavigateToPortfolio}
-            className="btn-hero group"
+            className="hero-button"
             aria-label="Browse my portfolio samples"
           >
             <span className="mr-3">🎯</span>
             Browse my Portfolio
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 ml-3" />
           </button>
-        </div>
-
-        {/* Video Placeholder Note */}
-        <div className="mt-12 text-center">
-          <p className="text-white/70 text-sm bg-black/30 rounded-lg px-4 py-2 inline-block">
-            🎬 Background video placeholder: Subtle screen recording of authoring tool workflow
-          </p>
         </div>
       </div>
     </section>
