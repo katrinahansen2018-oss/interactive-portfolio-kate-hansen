@@ -22,7 +22,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Kate Hansen
             <span className="block text-3xl md:text-4xl font-light mt-2 text-white/90">
-              Instructional Designer
+              E-Learning Developer
             </span>
           </h1>
           
