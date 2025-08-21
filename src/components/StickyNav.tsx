@@ -37,7 +37,7 @@ const StickyNav = () => {
           onClick={() => scrollToSection('#hero')}
           className="text-xl font-bold text-foreground hover:text-primary transition-colors"
         >
-          Kate Hansen
+          Kate Hansen, MEd
         </button>
 
         {/* Desktop Navigation */}

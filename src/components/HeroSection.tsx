@@ -26,7 +26,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       {/* Content */}
       <div className="hero-content-new">
         <h1 className="hero-name">
-          Kate Hansen
+          Kate Hansen, MEd
         </h1>
         
         <p className="hero-job-title">
