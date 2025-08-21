@@ -46,7 +46,7 @@ const StickyNav = () => {
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible min-w-[80px]"
+              className="px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible w-24 bg-secondary"
             >
               {link.label}
             </button>
@@ -70,7 +70,7 @@ const StickyNav = () => {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible"
+                  className="block w-full text-center px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible bg-secondary"
                 >
                   {link.label}
                 </button>
