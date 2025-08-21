@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Target } from 'lucide-react';
 
 interface HeroSectionProps {
   onNavigateToProcess: () => void;
@@ -54,7 +54,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
             className="hero-button"
             aria-label="Browse my portfolio samples"
           >
-            <span className="mr-3">🎯</span>
+            <Target className="w-5 h-5 mr-3" />
             Browse my Portfolio
             <ArrowRight className="w-5 h-5 ml-3" />
           </button>
