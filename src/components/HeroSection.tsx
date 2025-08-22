@@ -44,7 +44,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         <video
           ref={videoRef}
           className="w-full h-full rounded-full border-2 border-white object-cover"
-          poster="/kate-avatar-poster.png.PNG"
+          poster="/kate-avatar-poster.png"
           playsInline
           onEnded={() => setIsPlaying(false)}
         >
