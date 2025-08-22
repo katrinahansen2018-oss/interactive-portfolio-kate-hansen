@@ -32,7 +32,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         playsInline
         aria-hidden="true"
       >
-        <source src="/avatar-video.mp4" type="video/mp4" />
+        <source src="/avatar-video.mp4.mp4" type="video/mp4" />
       </video>
       
       {/* Content */}
