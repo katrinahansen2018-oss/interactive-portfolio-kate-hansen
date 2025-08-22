@@ -16,6 +16,9 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         videoRef.current.pause();
         setIsPlaying(false);
       } else {
+        // Ensure audio is enabled and volume is set
+        videoRef.current.muted = false;
+        videoRef.current.volume = 1.0;
         videoRef.current.play();
         setIsPlaying(true);
       }
