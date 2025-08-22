@@ -43,10 +43,12 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       <div className="absolute top-40 left-16 w-56 h-56 z-20">
         <video
           ref={videoRef}
-          className="w-full h-full rounded-full border-2 border-white object-cover"
+          className="w-full h-full rounded-full border-2 border-white object-cover bg-gray-200"
           poster="/kate-avatar-poster.png"
           playsInline
           onEnded={() => setIsPlaying(false)}
+          onError={() => console.log("Video error")}
+          onLoadStart={() => console.log("Video loading started")}
         >
           <source src="/avatar-video.mp4.mp4" type="video/mp4" />
         </video>
