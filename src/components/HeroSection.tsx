@@ -1,4 +1,5 @@
-import { ArrowRight, Play, Target } from 'lucide-react';
+import { ArrowRight, Play, Target, Pause } from 'lucide-react';
+import { useRef, useState } from 'react';
 
 interface HeroSectionProps {
   onNavigateToProcess: () => void;
@@ -6,6 +7,21 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSectionProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
   return (
     <section id="hero" className="hero-section-new">
       {/* Background Video */}
@@ -23,16 +39,32 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
       {/* Semi-transparent overlay */}
       <div className="hero-overlay" />
       
-      {/* Avatar Video */}
-      <video
-        className="absolute top-40 left-16 w-56 h-56 rounded-full border-2 border-white object-cover z-20"
-        autoPlay
-        loop
-        playsInline
-        aria-hidden="true"
-      >
-        <source src="/avatar-video.mp4.mp4" type="video/mp4" />
-      </video>
+      {/* Avatar Video with Play Button */}
+      <div className="absolute top-40 left-16 w-56 h-56 z-20">
+        <video
+          ref={videoRef}
+          className="w-full h-full rounded-full border-2 border-white object-cover"
+          playsInline
+          onEnded={() => setIsPlaying(false)}
+        >
+          <source src="/avatar-video.mp4.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Play/Pause Button Overlay */}
+        <button
+          onClick={toggleVideo}
+          className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-full hover:bg-black/30 transition-all duration-200 group"
+          aria-label={isPlaying ? "Pause video" : "Play video"}
+        >
+          <div className="bg-white/90 rounded-full p-4 group-hover:bg-white transition-all duration-200">
+            {isPlaying ? (
+              <Pause className="w-8 h-8 text-black" />
+            ) : (
+              <Play className="w-8 h-8 text-black ml-1" />
+            )}
+          </div>
+        </button>
+      </div>
       
       {/* Content */}
       <div className="hero-content-new">
