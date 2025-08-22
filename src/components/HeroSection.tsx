@@ -71,7 +71,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           }`}
           aria-label={isPlaying ? "Pause video" : "Play video"}
         >
-          <div className={`bg-white/50 rounded-full p-4 group-hover:bg-white/50 transition-all duration-300 ${
+          <div className={`bg-white/30 rounded-full p-4 group-hover:bg-white/30 transition-all duration-300 ${
             isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'
           }`}>
             {isPlaying ? (
