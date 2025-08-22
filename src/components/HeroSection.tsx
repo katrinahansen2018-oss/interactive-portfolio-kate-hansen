@@ -50,6 +50,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
             setIsPlaying(false);
             if (videoRef.current) {
               videoRef.current.currentTime = 0;
+              videoRef.current.load(); // Force reload to show poster
             }
           }}
           onError={() => console.log("Video error")}
