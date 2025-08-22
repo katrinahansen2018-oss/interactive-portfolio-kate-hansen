@@ -46,6 +46,8 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           className="w-full h-full rounded-full border-2 border-white object-cover bg-gray-200"
           poster="/kate-avatar-poster.png"
           playsInline
+          controls={false}
+          preload="metadata"
           onEnded={() => {
             setIsPlaying(false);
             if (videoRef.current) {
