@@ -53,10 +53,16 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         {/* Play/Pause Button Overlay */}
         <button
           onClick={toggleVideo}
-          className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-full hover:bg-black/30 transition-all duration-200 group"
+          className={`absolute inset-0 flex items-center justify-center rounded-full transition-all duration-300 group ${
+            isPlaying 
+              ? 'bg-transparent hover:bg-black/10' 
+              : 'bg-black/20 hover:bg-black/30'
+          }`}
           aria-label={isPlaying ? "Pause video" : "Play video"}
         >
-          <div className="bg-white/90 rounded-full p-4 group-hover:bg-white transition-all duration-200">
+          <div className={`bg-white/90 rounded-full p-4 group-hover:bg-white transition-all duration-300 ${
+            isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'
+          }`}>
             {isPlaying ? (
               <Pause className="w-8 h-8 text-black" />
             ) : (
