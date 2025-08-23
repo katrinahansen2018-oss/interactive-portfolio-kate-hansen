@@ -181,7 +181,7 @@ const ProcessTimeline = () => {
                    <a 
                      href={selectedStep.id === 'design' 
                        ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png"
-                       : "https://d1v4a0lthjdu12.cloudfront.net/#/lessons/Sa7aTMpJm7TTzg9IoL62WrQ9nJLOpu1l"
+                       : "https://d1v4a0lthjdu12.cloudfront.net/#/"
                      }
                      target="_blank"
                      rel="noopener noreferrer"
