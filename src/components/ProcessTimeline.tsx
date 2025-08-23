@@ -181,13 +181,13 @@ const ProcessTimeline = () => {
                    <a 
                      href={selectedStep.id === 'design' 
                        ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png"
-                       : "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a91984a8dc2c1fe29f1d9b/1755912580584/Needs-Analysis-Cybersecurity-Compliance-Training.pdf"
+                       : "https://d1v4a0lthjdu12.cloudfront.net/#/lessons/Sa7aTMpJm7TTzg9IoL62WrQ9nJLOpu1l"
                      }
                      target="_blank"
                      rel="noopener noreferrer"
                      className="inline-flex items-center justify-center mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                    >
-                     {selectedStep.id === 'design' ? 'View Storyboard →' : 'View Full Analysis →'}
+                     {selectedStep.id === 'design' ? 'View Storyboard →' : 'View Full Course →'}
                    </a>
                 </div>
               </div>
