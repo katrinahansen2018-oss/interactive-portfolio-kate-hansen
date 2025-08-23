@@ -44,8 +44,8 @@ const processSteps: ProcessStep[] = [
     title: 'Implement',
     icon: <Rocket className="w-6 h-6" />,
     description: 'Deploying solutions with comprehensive support strategies',
-    details: 'Strategic rollout includes pilot testing, instructor training, learner onboarding, and change management support. I create implementation guides, troubleshooting resources, and feedback collection systems.',
-    theory: 'Kotter\'s Change Management framework guides implementation, ensuring stakeholder buy-in, clear communication, and systematic adoption of new learning technologies and processes.',
+    details: 'Plan the rollout with a small pilot, incorporate feedback, then scale.\n\nPrepare facilitators/admins with quick-start guides and short training.\n\nOnboard learners with clear instructions, FAQs, and support channels.\n\nProvide change support: comms plan, champions, and help desk workflows.\n\nDeliver implementation guides, troubleshooting resources, and a simple feedback loop (surveys, in-app prompts, issue log).',
+    theory: 'Focus on stakeholder buy‑in, clear communication, and removing barriers so the new learning experience is easy to adopt.\n\nShow quick wins, share progress, and keep momentum until new practices become standard.',
     imageNote: 'Implementation timeline with training schedules and stakeholder communication plans'
   },
   {
