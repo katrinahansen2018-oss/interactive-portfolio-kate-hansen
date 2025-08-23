@@ -163,7 +163,7 @@ const ProcessTimeline = () => {
                         <img 
                           src={selectedStep.imageNote} 
                           alt="Process documentation example"
-                          className="w-full h-auto rounded-lg mx-auto mb-4 border border-secondary/40"
+                          className="w-full h-full object-cover rounded-lg"
                         />
                       ) : (
                         <>
@@ -175,9 +175,6 @@ const ProcessTimeline = () => {
                           </p>
                         </>
                       )}
-                      <p className="text-xs mt-2 italic">
-                        Interactive hotspots reveal process insights
-                      </p>
                     </div>
                   </div>
                 </div>
