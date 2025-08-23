@@ -37,7 +37,7 @@ const processSteps: ProcessStep[] = [
     description: 'Building interactive learning experiences with modern tools',
     details: 'I develop content using industry-standard authoring tools like Articulate Storyline, Adobe Captivate, and custom HTML5/JavaScript solutions. Focus on responsive design, accessibility compliance (WCAG 2.1), and engaging multimedia integration.',
     theory: 'Cognitive Load Theory informs my multimedia design decisions, balancing visual and auditory channels while minimizing extraneous cognitive load through clean, purposeful interface design.',
-    imageNote: 'Development environment screenshots showing responsive e-learning modules across devices'
+    imageNote: '/lovable-uploads/e3413d1a-17c5-4d53-89f1-1399c0d1a6b1.png'
   },
   {
     id: 'implement',
