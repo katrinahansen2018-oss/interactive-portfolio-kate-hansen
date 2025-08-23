@@ -184,7 +184,7 @@ const ProcessTimeline = () => {
                      rel="noopener noreferrer"
                      className="inline-flex items-center justify-center mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                    >
-                     Visit the website →
+                     View Full Analysis →
                    </a>
                 </div>
               </div>
