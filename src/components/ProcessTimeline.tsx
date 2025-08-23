@@ -186,7 +186,7 @@ const ProcessTimeline = () => {
                        : selectedStep.id === 'evaluate'
                        ? "https://d1sbe1ulbjmadi.cloudfront.net/"
                        : selectedStep.id === 'analyze'
-                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a91984a8dc2c1fe29f1d9b/1755912580584/Needs-Analysis-Cybersecurity-Compliance-Training.pdf"
+                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a9fc7573dcbb30d8dc3f54/1755970677448/Needs+Analysis.pdf"
                        : "https://d1v4a0lthjdu12.cloudfront.net/#/"
                      }
                      target="_blank"
