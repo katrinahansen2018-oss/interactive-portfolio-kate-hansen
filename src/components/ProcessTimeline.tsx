@@ -146,7 +146,7 @@ const ProcessTimeline = () => {
                   </p>
 
                   <h4 className="text-xl font-semibold text-foreground mb-4">
-                    Theoretical Foundation
+                    {selectedStep.id === 'implement' ? 'Rationale (plain language)' : 'Theoretical Foundation'}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
                     {selectedStep.theory}
