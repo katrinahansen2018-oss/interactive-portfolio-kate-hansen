@@ -53,8 +53,8 @@ const processSteps: ProcessStep[] = [
     title: 'Evaluate',
     icon: <BarChart3 className="w-6 h-6" />,
     description: 'Measuring impact and iterating for continuous improvement',
-    details: 'Comprehensive evaluation using Kirkpatrick\'s Four-Level model: reaction, learning, behavior, and results. I collect quantitative analytics and qualitative feedback to measure effectiveness and identify improvement opportunities.',
-    theory: 'Formative and summative evaluation strategies based on Scriven\'s evaluation methodology ensure continuous improvement and evidence-based decision making throughout the learning experience lifecycle.',
+    details: 'Evaluate at four levels: learner reaction, learning gains, on‑the‑job behavior, and organizational results.\n\nGather quantitative analytics (completion, scores, time, device, error rates) and qualitative feedback (surveys, interviews, comments).\n\nAnalyze by objective and item to spot gaps, equity/access issues, and points of confusion.\n\nClose the loop: document findings, prioritize fixes, and schedule updates; share a brief readout with stakeholders.',
+    theory: 'Measure whether the experience was useful, what was learned, what was applied, and what changed for the organization.\n\nUse both numbers and narratives to make evidence‑based improvements.',
     imageNote: 'Analytics dashboard showing learner engagement metrics and performance improvement data'
   }
 ];
