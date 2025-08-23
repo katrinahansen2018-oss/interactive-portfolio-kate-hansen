@@ -157,13 +157,13 @@ const ProcessTimeline = () => {
                   <h4 className="text-xl font-semibold text-foreground mb-4">
                     Annotated Documentation
                   </h4>
-                  <div className="bg-secondary/20 rounded-lg p-2 border-2 border-dashed border-secondary">
+                  <div className="bg-secondary/20 rounded-lg p-6 border-2 border-dashed border-secondary">
                     <div className="text-center text-muted-foreground">
                       {selectedStep.imageNote.startsWith('/') ? (
                         <img 
                           src={selectedStep.imageNote} 
                           alt="Process documentation example"
-                          className="w-full h-80 object-cover rounded-lg"
+                          className="w-full h-full object-cover rounded-lg"
                         />
                       ) : (
                         <>
