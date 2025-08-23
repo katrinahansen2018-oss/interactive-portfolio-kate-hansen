@@ -163,7 +163,7 @@ const ProcessTimeline = () => {
                         <img 
                           src={selectedStep.imageNote} 
                           alt="Process documentation example"
-                          className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-130 cursor-zoom-in"
+                          className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-[1.3] cursor-zoom-in"
                         />
                       ) : (
                         <>
