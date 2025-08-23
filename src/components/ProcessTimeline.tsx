@@ -28,7 +28,7 @@ const processSteps: ProcessStep[] = [
     description: 'Creating learner-centered instructional strategies and blueprints',
     details: 'Using evidence-based design principles, I create detailed storyboards, interaction maps, and assessment strategies. This phase emphasizes Universal Design for Learning (UDL) principles to ensure accessibility and engagement for diverse learners.',
     theory: 'Merrill\'s First Principles of Instruction guide my design decisions, ensuring activation of prior knowledge, demonstration of skills, application opportunities, and integration into real-world contexts.',
-    imageNote: 'Storyboard wireframes showing learner journey maps and interactive element specifications'
+    imageNote: '/lovable-uploads/03f4a6fc-e11c-4077-9566-0e2abbe2bf7c.png'
   },
   {
     id: 'develop',
