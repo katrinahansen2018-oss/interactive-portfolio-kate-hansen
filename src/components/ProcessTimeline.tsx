@@ -19,7 +19,7 @@ const processSteps: ProcessStep[] = [
     description: 'Conducting thorough needs analysis and learner profiling',
     details: 'I begin every project with comprehensive stakeholder interviews, learning environment analysis, and performance gap identification. This phase involves gathering data through surveys, interviews, and observation to understand the current state and desired outcomes.',
     theory: 'Grounded in Gagné\'s Conditions of Learning, I focus on identifying the type of learning outcome (intellectual skills, cognitive strategies, verbal information, motor skills, or attitudes) to inform the entire design approach.',
-    imageNote: 'Screenshot of needs analysis document with stakeholder interview notes and learning objectives matrix'
+    imageNote: '/lovable-uploads/60813e46-06d5-4519-b680-1d2e547929ad.png'
   },
   {
     id: 'design',
@@ -159,12 +159,22 @@ const ProcessTimeline = () => {
                   </h4>
                   <div className="bg-secondary/20 rounded-lg p-6 border-2 border-dashed border-secondary">
                     <div className="text-center text-muted-foreground">
-                      <div className="w-16 h-16 bg-secondary/40 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                        📸
-                      </div>
-                      <p className="text-sm leading-relaxed">
-                        {selectedStep.imageNote}
-                      </p>
+                      {selectedStep.imageNote.startsWith('/') ? (
+                        <img 
+                          src={selectedStep.imageNote} 
+                          alt="Process documentation example"
+                          className="w-full h-auto rounded-lg mx-auto mb-4 border border-secondary/40"
+                        />
+                      ) : (
+                        <>
+                          <div className="w-16 h-16 bg-secondary/40 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            📸
+                          </div>
+                          <p className="text-sm leading-relaxed">
+                            {selectedStep.imageNote}
+                          </p>
+                        </>
+                      )}
                       <p className="text-xs mt-2 italic">
                         Interactive hotspots reveal process insights
                       </p>
