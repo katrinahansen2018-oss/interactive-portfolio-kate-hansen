@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, RefreshCw, Eye, Heart, Lightbulb, Target, Video } from 'lucide-react';
+import { Users, RefreshCw, Eye, Heart, Lightbulb, Target, Video, Play } from 'lucide-react';
 
 interface Value {
   id: string;
@@ -166,7 +166,7 @@ const ValuesSection = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                          ▶️
+                          <Play className="w-4 h-4 text-primary" />
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">Reflection</p>
