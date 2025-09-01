@@ -17,7 +17,7 @@ const values: Value[] = [
     title: 'Accessibility First',
     icon: <Eye className="w-8 h-8" />,
     description: 'Designing inclusive experiences that work for everyone, regardless of ability or technology access.',
-    fullExplanation: 'Accessibility isn\'t an afterthought—it\'s woven into every design decision I make. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
+    fullExplanation: 'Accessibility isn\'t an afterthought - it\'s woven into every design decision. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
     audioNote: 'Audio clip: Why accessibility makes better learning for everyone, not just those with disabilities',
     projectLink: '#portfolio'
   },
