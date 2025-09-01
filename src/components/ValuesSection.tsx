@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, RefreshCw, Eye, Heart, Lightbulb, Target } from 'lucide-react';
+import { Users, RefreshCw, Eye, Heart, Lightbulb, Target, Video } from 'lucide-react';
 
 interface Value {
   id: string;
@@ -156,7 +156,7 @@ const ValuesSection = () => {
 
                 <div className="bg-secondary/20 rounded-lg p-6">
                   <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                    🎧 Audio Reflection
+                    <Video className="w-5 h-5 mr-2" /> Reflection
                   </h4>
                   <p className="text-muted-foreground text-sm mb-4">
                     {expandedValue.audioNote}
@@ -169,8 +169,8 @@ const ValuesSection = () => {
                           ▶️
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-foreground">Audio Reflection</p>
-                          <p className="text-xs text-muted-foreground">2:30 • With transcript</p>
+                          <p className="text-sm font-medium text-foreground">Reflection</p>
+                          <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
                         </div>
                       </div>
                       <button className="text-xs text-primary hover:underline focus-visible">
