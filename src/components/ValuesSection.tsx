@@ -164,33 +164,46 @@ const ValuesSection = () => {
                     {expandedValue.audioNote}
                   </p>
                   
-                  <div className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                          <Play className="w-4 h-4 text-primary" />
+                  {expandedValue.videoLink ? (
+                    <a 
+                      href={expandedValue.videoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary hover:bg-secondary/50 transition-colors cursor-pointer block"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                            <Play className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Reflection</p>
+                            <p className="text-xs text-muted-foreground">0:40 • Click to watch</p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-sm font-medium text-foreground">Reflection</p>
-                          <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
+                        <div className="text-xs text-primary hover:underline font-medium">
+                          Play Video →
                         </div>
                       </div>
-                      {expandedValue.videoLink ? (
-                        <a 
-                          href={expandedValue.videoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs text-primary hover:underline focus-visible"
-                        >
-                          Play Video
-                        </a>
-                      ) : (
-                        <button className="text-xs text-primary hover:underline focus-visible">
+                    </a>
+                  ) : (
+                    <div className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                            <Play className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Reflection</p>
+                            <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
+                          </div>
+                        </div>
+                        <button className="text-xs text-primary hover:underline focus-visible cursor-pointer">
                           View Transcript
                         </button>
-                      )}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <div className="flex justify-end">
