@@ -9,6 +9,7 @@ interface Value {
   fullExplanation: string;
   audioNote: string;
   projectLink: string;
+  videoLink?: string;
 }
 
 const values: Value[] = [
@@ -19,7 +20,8 @@ const values: Value[] = [
     description: 'Designing inclusive experiences that work for everyone, regardless of ability or technology access.',
     fullExplanation: 'Accessibility isn\'t an afterthought - it\'s woven into every design decision. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
     audioNote: 'Video: Why accessibility makes better learning for everyone, not just those with disabilities',
-    projectLink: '#portfolio'
+    projectLink: '#portfolio',
+    videoLink: 'https://www.kate-hansen.com/hidden-page#accessibility'
   },
   {
     id: 'continuous-improvement',
@@ -173,9 +175,20 @@ const ValuesSection = () => {
                           <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
                         </div>
                       </div>
-                      <button className="text-xs text-primary hover:underline focus-visible">
-                        View Transcript
-                      </button>
+                      {expandedValue.videoLink ? (
+                        <a 
+                          href={expandedValue.videoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-primary hover:underline focus-visible"
+                        >
+                          Play Video
+                        </a>
+                      ) : (
+                        <button className="text-xs text-primary hover:underline focus-visible">
+                          View Transcript
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
