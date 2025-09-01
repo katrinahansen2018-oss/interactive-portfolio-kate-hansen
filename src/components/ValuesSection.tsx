@@ -18,7 +18,7 @@ const values: Value[] = [
     icon: <Eye className="w-8 h-8" />,
     description: 'Designing inclusive experiences that work for everyone, regardless of ability or technology access.',
     fullExplanation: 'Accessibility isn\'t an afterthought - it\'s woven into every design decision. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
-    audioNote: 'Audio clip: Why accessibility makes better learning for everyone, not just those with disabilities',
+    audioNote: 'Video: Why accessibility makes better learning for everyone, not just those with disabilities',
     projectLink: '#portfolio'
   },
   {
@@ -27,7 +27,7 @@ const values: Value[] = [
     icon: <RefreshCw className="w-8 h-8" />,
     description: 'Embracing iterative design cycles and data-driven refinements for optimal learning outcomes.',
     fullExplanation: 'Great instructional design is never "done." I build feedback loops into every project, using learner analytics, performance data, and stakeholder input to continuously refine and improve learning experiences. This agile approach ensures that solutions evolve with changing needs and emerging best practices.',
-    audioNote: 'Audio reflection: How embracing failure and iteration leads to breakthrough learning solutions',
+    audioNote: 'Video reflection: How embracing failure and iteration leads to breakthrough learning solutions',
     projectLink: '#portfolio'
   },
   {
