@@ -207,12 +207,14 @@ const ValuesSection = () => {
                 </div>
 
                 <div className="flex justify-end">
-                  <button
-                    onClick={scrollToPortfolio}
+                  <a
+                    href="https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b61d2d7d5b0e76f2894dac/1756765485651/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-secondary"
                   >
                     See it in action →
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
