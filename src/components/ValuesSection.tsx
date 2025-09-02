@@ -156,7 +156,7 @@ const ValuesSection = () => {
                   </p>
                 </div>
 
-                {expandedValue.id !== 'continuous-improvement' && (
+                {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'udl' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
                       <RotateCcw className="w-5 h-5 mr-2" /> Reflection
