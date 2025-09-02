@@ -212,6 +212,8 @@ const ValuesSection = () => {
                   <a
                     href={expandedValue.id === 'continuous-improvement' 
                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b629fd40137952a1755afb/1756768765384/Continuous-Improvement-in-Action.pdf"
+                      : expandedValue.id === 'udl'
+                      ? "https://d1i5b4vrjc3nqn.cloudfront.net/"
                       : "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b61d2d7d5b0e76f2894dac/1756765485651/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf"
                     }
                     target="_blank"
