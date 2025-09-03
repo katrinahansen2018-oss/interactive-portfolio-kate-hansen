@@ -170,6 +170,14 @@ const ValuesSection = () => {
                   </div>
                 )}
 
+                {expandedValue.id === 'purposeful' && (
+                  <div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong>Example:</strong> A streamlined storyboard from "Brightspace D2L Essentials" that focuses solely on key navigation tasks, reducing complexity for better learner focus.
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex justify-end">
                   <a
                     href="https://d2i0gz0yrz84zc.cloudfront.net/"
