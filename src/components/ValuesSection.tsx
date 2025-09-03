@@ -28,8 +28,8 @@ const values: Value[] = [
     title: 'Continuous Improvement',
     icon: <RefreshCw className="w-8 h-8" />,
     description: 'Embracing iterative design cycles and data-driven refinements for optimal learning outcomes.',
-    fullExplanation: 'Great instructional design is never "done." I build feedback loops into every project, using learner analytics, performance data, and stakeholder input to continuously refine and improve learning experiences. This agile approach ensures that solutions evolve with changing needs and emerging best practices.',
-    audioNote: 'Video reflection: How embracing failure and iteration leads to breakthrough learning solutions',
+    fullExplanation: 'Great instructional design is never "done." I build feedback loops into every project, using learner analytics, performance data, and stakeholder input to refine and improve experiences. This agile approach ensures solutions evolve with changing needs and best practices.',
+    audioNote: 'Embracing failure and iteration has led to my best breakthroughs. For instance, in a recent e-learning module, initial user feedback revealed confusing navigation. I iterated quickly, boosting participation rates by 15%. This mindset turns setbacks into stronger, more effective learning solutions.\nI hold a Lean management certification and love applying PDCA (Plan-Do-Check-Act) cycles to instructional design projects. I also use the SAM (Successive Approximation Model) for iterative development, ensuring effective, learner-centered solutions.',
     projectLink: '#portfolio'
   },
   {
