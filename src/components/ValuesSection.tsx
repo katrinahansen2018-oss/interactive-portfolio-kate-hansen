@@ -156,6 +156,20 @@ const ValuesSection = () => {
                   </p>
                 </div>
 
+                {expandedValue.id === 'evidence-based' && (
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-4">
+                      My Reflection
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      In my design methodology, I draw directly from learning science, like cognitive load theory to avoid overwhelming learners and Mayer's multimedia principles for effective visuals. For instance, I use spaced repetition and feedback loops to boost retention, as seen in my courses where analytics show improved outcomes. This evidence-based approach ensures my work is not just intuitive but proven, allowing continual refinement for real impact.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong>Project Example:</strong> In my "Cybersecurity Awareness" microlearning course, I applied cognitive load theory and multimedia research to create scenario-driven interactions that optimize retention without overload. WCAG 2.2 compliance ensured accessibility, with analytics-driven iterations improving engagement by addressing real learner data.
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex justify-end">
                   <a
                     href="https://d2i0gz0yrz84zc.cloudfront.net/"
