@@ -156,68 +156,72 @@ const ValuesSection = () => {
                   </p>
                 </div>
 
-                <div className="bg-secondary/20 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                    {expandedValue.id === 'continuous-improvement' ? (
-                      <RotateCcw className="w-5 h-5 mr-2" />
-                    ) : (
-                      <Video className="w-5 h-5 mr-2" />
-                    )} Reflection
-                  </h4>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {expandedValue.audioNote}
-                  </p>
-                  
-                  {expandedValue.id !== 'continuous-improvement' && (
-                    <>
-                      {expandedValue.videoLink ? (
-                        <a 
-                          href={expandedValue.videoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary hover:bg-secondary/50 transition-colors cursor-pointer block"
-                        >
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-3">
-                              <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                                <Play className="w-4 h-4 text-primary" />
-                              </div>
-                              <div>
-                                <p className="text-sm font-medium text-foreground">Reflection</p>
-                                <p className="text-xs text-muted-foreground">0:40 • Click to watch</p>
-                              </div>
-                            </div>
-                            <div className="text-xs text-primary hover:underline font-medium">
-                              Play Video →
-                            </div>
-                          </div>
-                        </a>
+                {expandedValue.id !== 'udl' && (
+                  <div className="bg-secondary/20 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
+                      {expandedValue.id === 'continuous-improvement' ? (
+                        <RotateCcw className="w-5 h-5 mr-2" />
                       ) : (
-                        <div className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-3">
-                              <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                                <Play className="w-4 h-4 text-primary" />
+                        <Video className="w-5 h-5 mr-2" />
+                      )} Reflection
+                    </h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {expandedValue.audioNote}
+                    </p>
+                    
+                    {expandedValue.id !== 'continuous-improvement' && (
+                      <>
+                        {expandedValue.videoLink ? (
+                          <a 
+                            href={expandedValue.videoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary hover:bg-secondary/50 transition-colors cursor-pointer block"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                                  <Play className="w-4 h-4 text-primary" />
+                                </div>
+                                <div>
+                                  <p className="text-sm font-medium text-foreground">Reflection</p>
+                                  <p className="text-xs text-muted-foreground">0:40 • Click to watch</p>
+                                </div>
                               </div>
-                              <div>
-                                <p className="text-sm font-medium text-foreground">Reflection</p>
-                                <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
+                              <div className="text-xs text-primary hover:underline font-medium">
+                                Play Video →
                               </div>
                             </div>
-                            <button className="text-xs text-primary hover:underline focus-visible cursor-pointer">
-                              View Transcript
-                            </button>
+                          </a>
+                        ) : (
+                          <div className="bg-secondary/30 rounded-lg p-4 border border-dashed border-secondary">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                                  <Play className="w-4 h-4 text-primary" />
+                                </div>
+                                <div>
+                                  <p className="text-sm font-medium text-foreground">Reflection</p>
+                                  <p className="text-xs text-muted-foreground">0:40 • With transcript</p>
+                                </div>
+                              </div>
+                              <button className="text-xs text-primary hover:underline focus-visible cursor-pointer">
+                                View Transcript
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      )}
-                    </>
-                  )}
-                </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex justify-end">
                   <a
                     href={expandedValue.id === 'continuous-improvement' 
                       ? 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b629fd40137952a1755afb/1756768765384/Continuous-Improvement-in-Action.pdf'
+                      : expandedValue.id === 'udl'
+                      ? 'https://d1i5b4vrjc3nqn.cloudfront.net/'
                       : 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b61d2d7d5b0e76f2894dac/1756765485651/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf'
                     }
                     target="_blank"
