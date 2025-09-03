@@ -46,8 +46,8 @@ const values: Value[] = [
     title: 'Human-Centered Empathy',
     icon: <Heart className="w-8 h-8" />,
     description: 'Centering learner needs, emotions, and real-world contexts in every design decision.',
-    fullExplanation: 'Behind every learning objective is a human being with goals, fears, constraints, and aspirations. I prioritize deep empathy in my design process, conducting learner interviews, creating detailed personas, and considering emotional as well as cognitive factors in the learning journey.',
-    audioNote: 'Reflection: The role of emotional design in creating memorable learning experiences',
+    fullExplanation: 'Behind every learning objective is a human with goals, fears, constraints, and aspirations. I prioritize deep empathy by conducting learner interviews, creating personas, and factoring in emotional and cognitive needs to design resonant experiences.',
+    audioNote: 'Emotional design has been key to making my courses memorable. I\'ve learned that addressing learners\' frustrations (like tech anxiety) with supportive elements, like relatable scenarios, creates deeper connections. This approach turns potential overwhelm into motivation, as seen when a simple empathy map revealed pain points in a time management module, leading to more engaging, stress-reducing content.\n\nProject Example: In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.',
     projectLink: '#portfolio'
   },
   {
@@ -159,9 +159,9 @@ const ValuesSection = () => {
                 {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'udl' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      <RotateCcw className="w-5 h-5 mr-2" /> Reflection
+                      <RotateCcw className="w-5 h-5 mr-2" /> My Reflection
                     </h4>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-muted-foreground text-sm mb-4 whitespace-pre-line">
                       {expandedValue.audioNote}
                     </p>
                     
@@ -214,6 +214,8 @@ const ValuesSection = () => {
                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b629fd40137952a1755afb/1756768765384/Continuous-Improvement-in-Action.pdf"
                       : expandedValue.id === 'udl'
                       ? "https://d1i5b4vrjc3nqn.cloudfront.net/"
+                      : expandedValue.id === 'empathy'
+                      ? "https://d1v4a0lthjdu12.cloudfront.net/#/"
                       : "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b61d2d7d5b0e76f2894dac/1756765485651/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf"
                     }
                     target="_blank"
