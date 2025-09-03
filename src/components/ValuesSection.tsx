@@ -180,7 +180,10 @@ const ValuesSection = () => {
 
                 <div className="flex justify-end">
                   <a
-                    href="https://d2i0gz0yrz84zc.cloudfront.net/"
+                    href={expandedValue.id === 'purposeful' 
+                      ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png"
+                      : "https://d2i0gz0yrz84zc.cloudfront.net/"
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary"
