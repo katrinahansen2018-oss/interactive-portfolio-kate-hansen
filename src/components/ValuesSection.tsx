@@ -156,6 +156,20 @@ const ValuesSection = () => {
                   </p>
                 </div>
 
+                {expandedValue.id === 'empathy' && (
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-4">
+                      My Reflection
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Emotional design has been key to making my courses memorable. I've learned that addressing learners' frustrations (like tech anxiety) with supportive elements, like relatable scenarios, creates deeper connections. This approach turns potential overwhelm into motivation, as seen when a simple empathy map revealed pain points in a time management module, leading to more engaging, stress-reducing content.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong>Project Example:</strong> In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.
+                    </p>
+                  </div>
+                )}
+
                 {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'udl' && expandedValue.id !== 'empathy' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
