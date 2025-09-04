@@ -189,7 +189,7 @@ const ValuesSection = () => {
                                 </div>
                               </div>
                               <div className="text-xs text-primary hover:underline font-medium">
-                                Play Video →
+                                Watch Video →
                               </div>
                             </div>
                           </a>
