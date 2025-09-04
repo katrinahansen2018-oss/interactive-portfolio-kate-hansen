@@ -61,7 +61,7 @@ const PortfolioGallery = () => {
             Project Explorer
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real-world learning solutions that demonstrate my approach to inclusive, effective instructional design
+            Learning solutions that demonstrate my approach to effective instructional design
           </p>
         </div>
 
@@ -96,8 +96,10 @@ const PortfolioGallery = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    {project.category}
+                  <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full min-w-[200px] text-center">
+                    {project.id === 'cybersecurity-awareness' ? 'Lovable AI' :
+                     project.id === 'time-management' ? 'Figma & Storyline' :
+                     'Articulate Rise & Storyline'}
                   </span>
                 </div>
                 

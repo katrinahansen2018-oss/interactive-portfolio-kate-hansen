@@ -32,10 +32,10 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-footer-foreground mb-6">
-            Connect & Next Steps
+            Connect
           </h2>
           <p className="text-xl text-footer-foreground/80 max-w-3xl mx-auto">
-            Ready to create exceptional learning experiences together? Let's start the conversation.
+            Interested in how my expertise can support your organization's learning initiatives? I welcome the opportunity to discuss how I can contribute to your team.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div>
             <h3 className="text-2xl font-bold text-footer-foreground mb-6">
-              Start a Project Discussion
+              Contact Me
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -62,7 +62,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-footer-foreground/10 border border-footer-foreground/20 text-footer-foreground placeholder:text-footer-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                  placeholder="Enter your full name"
+                  placeholder="Enter your name"
                 />
               </div>
 
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   htmlFor="message" 
                   className="block text-sm font-medium text-footer-foreground mb-2"
                 >
-                  Project Details
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -100,7 +100,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-footer-foreground/10 border border-footer-foreground/20 text-footer-foreground placeholder:text-footer-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical"
-                  placeholder="Tell me about your learning challenge, target audience, timeline, and goals..."
+                  placeholder="How can I support your team?"
                 />
               </div>
 
@@ -132,11 +132,6 @@ const ContactSection = () => {
               </h3>
               
               <div className="space-y-4">
-                <button className="w-full bg-secondary hover:bg-secondary-hover text-secondary-foreground font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group">
-                  <Calendar className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                  Schedule a 30-min Discovery Call
-                </button>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <button className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20">
                     <Download className="w-4 h-4 mr-2" />
@@ -145,7 +140,7 @@ const ContactSection = () => {
                   
                   <button className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20">
                     <Linkedin className="w-4 h-4 mr-2" />
-                    LinkedIn Profile
+                    View LinkedIn Profile
                   </button>
                 </div>
               </div>
@@ -161,7 +156,7 @@ const ContactSection = () => {
                   <Mail className="w-5 h-5 text-primary mr-4" />
                   <div>
                     <p className="text-footer-foreground font-medium">Email</p>
-                    <p className="text-footer-foreground/80 text-sm">your.name@email.com</p>
+                    <p className="text-footer-foreground/80 text-sm">katrina.hansen2018@gmail.com</p>
                   </div>
                 </div>
                 
@@ -169,7 +164,7 @@ const ContactSection = () => {
                   <Phone className="w-5 h-5 text-primary mr-4" />
                   <div>
                     <p className="text-footer-foreground font-medium">Phone</p>
-                    <p className="text-footer-foreground/80 text-sm">(555) 123-4567</p>
+                    <p className="text-footer-foreground/80 text-sm">(403) 926-0657</p>
                   </div>
                 </div>
               </div>
@@ -180,7 +175,7 @@ const ContactSection = () => {
                 Response Time
               </h4>
               <p className="text-footer-foreground/80 text-sm leading-relaxed">
-                I typically respond to project inquiries within 24 hours. For urgent accessibility consultations or time-sensitive projects, please mention this in your message.
+                I typically respond to employment and collaboration inquiries within 24 hours. For urgent matters, please mention this in your message.
               </p>
             </div>
           </div>
@@ -189,7 +184,7 @@ const ContactSection = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-footer-foreground/20">
           <p className="text-footer-foreground/60 text-sm">
-            © 2024 [Your Name] • Instructional Designer • Building inclusive learning experiences
+            © 2025 Kate Hansen • E-Learning Developer • Passionate About Learning, Inspired by Possibility
           </p>
         </div>
       </div>
