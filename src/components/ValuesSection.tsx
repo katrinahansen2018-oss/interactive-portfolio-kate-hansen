@@ -46,7 +46,7 @@ const values: Value[] = [
     title: 'Human-Centered Empathy',
     icon: <Heart className="w-8 h-8" />,
     description: 'Centering learner needs, emotions, and real-world contexts in every design decision.',
-    fullExplanation: 'Behind every learning objective is a human being with goals, fears, constraints, and aspirations. I prioritize deep empathy in my design process, conducting learner interviews, creating detailed personas, and considering emotional as well as cognitive factors in the learning journey.',
+    fullExplanation: 'Behind every learning objective is a human with goals, fears, constraints, and aspirations. I prioritize deep empathy by conducting learner interviews, creating personas, and factoring in emotional and cognitive needs to design resonant experiences.\n\nMy Reflection\nEmotional design has been key to making my courses memorable. I\'ve learned that addressing learners\' frustrations (like tech anxiety) with supportive elements, like relatable scenarios, creates deeper connections. This approach turns potential overwhelm into motivation, as seen when a simple empathy map revealed pain points in a time management module, leading to more engaging, stress-reducing content.\n\nProject Example: In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.',
     audioNote: 'Reflection: The role of emotional design in creating memorable learning experiences',
     projectLink: '#portfolio'
   },
@@ -156,7 +156,7 @@ const ValuesSection = () => {
                   </p>
                 </div>
 
-                {expandedValue.id !== 'udl' && (
+                {expandedValue.id !== 'udl' && expandedValue.id !== 'empathy' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
                       {expandedValue.id === 'continuous-improvement' ? (
