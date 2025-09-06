@@ -35,7 +35,9 @@ const ContactSection = () => {
             Connect
           </h2>
           <p className="text-xl text-footer-foreground/80 max-w-3xl mx-auto">
-            Interested in how my expertise can support your organization's learning initiatives? I welcome the opportunity to discuss how I can contribute to your team.
+            Interested in how my expertise can support your organization's learning initiatives?
+            <br />
+            I welcome the opportunity to discuss how I can contribute to your team.
           </p>
         </div>
 
@@ -133,16 +135,34 @@ const ContactSection = () => {
               
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <button className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20">
+                  <a 
+                    href="https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68bb742fb1299602325678ff/1757115439672/Kate+Hansen+e-Learning+Developer+CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20"
+                  >
                     <Download className="w-4 h-4 mr-2" />
                     Download CV
-                  </button>
+                  </a>
                   
-                  <button className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20">
+                  <a 
+                    href="https://www.linkedin.com/in/kate-hansen-med-8a48bb25"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20"
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     View LinkedIn Profile
-                  </button>
+                  </a>
                 </div>
+                
+                <a 
+                  href="mailto:katrina.hansen2018@gmail.com"
+                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Connect Directly
+                </a>
               </div>
             </div>
 
