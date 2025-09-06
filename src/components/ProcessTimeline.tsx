@@ -28,7 +28,7 @@ const processSteps: ProcessStep[] = [
     description: 'Creating learner-centered instructional strategies and blueprints',
     details: 'Using evidence-based design principles, I create detailed storyboards, interaction maps, and assessment strategies. This phase emphasizes Universal Design for Learning (UDL) principles to ensure accessibility and engagement for diverse learners.',
     theory: 'Merrill\'s First Principles of Instruction guide my design decisions, ensuring activation of prior knowledge, demonstration of skills, application opportunities, and integration into real-world contexts.',
-    imageNote: '/lovable-uploads/04abcd27-abd5-4bd4-9588-6ee8aac573a4.png'
+    imageNote: '/lovable-uploads/dedf4504-32fb-4cc2-bfa5-65dd5e7ce4d0.png'
   },
   {
     id: 'develop',
@@ -180,7 +180,7 @@ const ProcessTimeline = () => {
                    
                    <a 
                      href={selectedStep.id === 'design' 
-                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png"
+                       ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a1e74876ffe21d6a338761/1755440968611/ARCS+Framework.pdf"
                        : selectedStep.id === 'implement'
                        ? "https://www.surveymonkey.com/r/JJ3K7Y6"
                        : selectedStep.id === 'evaluate'
@@ -193,7 +193,7 @@ const ProcessTimeline = () => {
                      rel="noopener noreferrer"
                      className="inline-flex items-center justify-center mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                    >
-                     {selectedStep.id === 'design' ? 'View Storyboard →' : selectedStep.id === 'implement' ? 'View Survey →' : selectedStep.id === 'evaluate' ? 'View Analytics →' : selectedStep.id === 'analyze' ? 'View full Analysis' : 'View Full Course →'}
+                     {selectedStep.id === 'design' ? 'View ARCS Framework →' : selectedStep.id === 'implement' ? 'View Survey →' : selectedStep.id === 'evaluate' ? 'View Analytics →' : selectedStep.id === 'analyze' ? 'View full Analysis' : 'View Full Course →'}
                    </a>
                 </div>
               </div>
