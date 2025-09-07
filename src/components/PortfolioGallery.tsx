@@ -54,7 +54,7 @@ const projects: Project[] = [
 
 const PortfolioGallery = () => {
   return (
-    <section id="portfolio" className="py-20 px-6 bg-muted/30">
+    <section id="portfolio" className="py-20 px-6 bg-muted/30" role="region" aria-label="Portfolio showcase">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -63,20 +63,27 @@ const PortfolioGallery = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Learning solutions that demonstrate my approach to effective instructional design
           </p>
+          <div className="mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20 max-w-2xl mx-auto">
+            <p className="text-sm text-foreground">
+              <strong>🎯 Reflection:</strong> As you explore these projects, consider which approaches might work for your learners. 
+              What resonates with your training goals?
+            </p>
+          </div>
         </div>
 
         {/* Project Grid */}
-        <div className="portfolio-grid">
+        <div className="portfolio-grid" role="group" aria-label="Portfolio projects">
           {projects.map((project) => (
-            <div key={project.id} className="portfolio-card">
+            <article key={project.id} className="portfolio-card">
               <div className="relative h-48 bg-secondary/20 overflow-hidden">
                 <img 
                   src={project.thumbnail} 
-                  alt={project.title}
+                  alt={`Screenshot of ${project.title} project - ${project.tagline}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 
-                <div className="portfolio-overlay">
+                <div className="portfolio-overlay group">
                   <a
                     href={project.id === 'cybersecurity-awareness' 
                       ? 'https://d2i0gz0yrz84zc.cloudfront.net/'
@@ -87,16 +94,23 @@ const PortfolioGallery = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-hero text-base focus-visible"
+                    aria-label={`View ${project.title} project in new tab - Opens external learning experience`}
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
+                    <ExternalLink className="w-4 h-4 mr-2" aria-hidden="true" />
                     View Project
+                    <span className="sr-only">(opens in new tab)</span>
                   </a>
                 </div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full min-w-[200px] text-center">
+                  <span 
+                    className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full min-w-[200px] text-center"
+                    aria-label={`Built with ${project.id === 'cybersecurity-awareness' ? 'Lovable AI' :
+                     project.id === 'time-management' ? 'Figma and Storyline' :
+                     'Articulate Rise and Storyline'}`}
+                  >
                     {project.id === 'cybersecurity-awareness' ? 'Lovable AI' :
                      project.id === 'time-management' ? 'Figma & Storyline' :
                      'Articulate Rise & Storyline'}
@@ -110,8 +124,12 @@ const PortfolioGallery = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {project.tagline}
                 </p>
+
+                <div className="mt-4 text-xs text-muted-foreground">
+                  <strong>Training challenge:</strong> {project.challenge.substring(0, 80)}...
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

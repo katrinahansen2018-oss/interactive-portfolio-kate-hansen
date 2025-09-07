@@ -26,7 +26,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
   };
 
   return (
-    <section id="hero" className="hero-section-new">
+    <section id="hero" className="hero-section-new" role="banner">
       {/* Background Video */}
       <video
         className="hero-video"
@@ -35,8 +35,10 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
         loop
         playsInline
         aria-hidden="true"
+        aria-label="Background video"
       >
         <source src="/placeholder-video.mp4" type="video/mp4" />
+        <track kind="captions" src="/captions/hero-video.vtt" srcLang="en" label="English captions" />
       </video>
       
       {/* Semi-transparent overlay */}
@@ -51,6 +53,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           playsInline
           controls={false}
           preload="metadata"
+          aria-label="Kate Hansen introduction video"
           onEnded={() => {
             setIsPlaying(false);
             if (videoRef.current) {
@@ -62,6 +65,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           onLoadStart={() => console.log("Video loading started")}
         >
           <source src="/avatar-video.mp4.mp4" type="video/mp4" />
+          <track kind="captions" src="/captions/avatar-video.vtt" srcLang="en" label="English captions" />
         </video>
         
         {/* Play/Pause Button Overlay */}
@@ -105,22 +109,29 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           <button 
             onClick={onNavigateToProcess}
             className="hero-button"
-            aria-label="Explore my design process"
+            aria-label="Explore my design process - Learn about my systematic approach to instructional design"
           >
-            <Play className="w-5 h-5 mr-3" />
+            <Play className="w-5 h-5 mr-3" aria-hidden="true" />
             Explore my Design Process
-            <ArrowRight className="w-5 h-5 ml-3" />
+            <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
           
           <button 
             onClick={onNavigateToPortfolio}
             className="hero-button"
-            aria-label="Browse my portfolio samples"
+            aria-label="Browse my portfolio samples - View examples of my learning solutions"
           >
-            <Target className="w-5 h-5 mr-3" />
+            <Target className="w-5 h-5 mr-3" aria-hidden="true" />
             Browse my Portfolio         
-            <ArrowRight className="w-5 h-5 ml-3" />
+            <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-white/80 text-sm max-w-md mx-auto">
+            💡 <strong>Reflection prompt:</strong> What learning challenges is your organization currently facing? 
+            As you explore my work, consider how these approaches might address your team's needs.
+          </p>
         </div>
       </div>
     </section>

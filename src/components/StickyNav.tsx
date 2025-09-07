@@ -31,22 +31,29 @@ const StickyNav = () => {
   };
 
   return (
-    <nav className={`sticky-nav transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'}`}>
+    <nav 
+      className={`sticky-nav transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'}`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <button 
           onClick={() => scrollToSection('#hero')}
-          className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+          className="text-xl font-bold text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
+          aria-label="Go to homepage"
         >
           Kate Hansen
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4" role="menubar">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible w-24 bg-secondary"
+              className="px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 min-w-[6rem] bg-secondary"
+              role="menuitem"
+              aria-label={`Navigate to ${link.label} section`}
             >
               {link.label}
             </button>
@@ -64,13 +71,19 @@ const StickyNav = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background border-b border-border/50 md:hidden">
+          <div 
+            className="absolute top-full left-0 right-0 bg-background border-b border-border/50 md:hidden z-50"
+            role="menu"
+            aria-label="Mobile navigation menu"
+          >
             <div className="px-6 py-4 space-y-3">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-center px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus-visible bg-secondary"
+                  className="block w-full text-center px-4 py-2 text-foreground font-medium transition-all duration-200 border border-transparent hover:border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 bg-secondary min-h-[2.75rem]"
+                  role="menuitem"
+                  aria-label={`Navigate to ${link.label} section`}
                 >
                   {link.label}
                 </button>

@@ -31,7 +31,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="connect" className="footer-section">
+    <section id="connect" className="footer-section" role="region" aria-label="Contact information">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-footer-foreground mb-6">
@@ -42,6 +42,12 @@ const ContactSection = () => {
             <br />
             I welcome the opportunity to discuss how I can contribute to your team.
           </p>
+          <div className="mt-6 p-4 bg-footer-foreground/10 rounded-lg border border-footer-foreground/20 max-w-2xl mx-auto">
+            <p className="text-sm text-footer-foreground">
+              <strong>💡 Before reaching out:</strong> Consider what specific learning challenges your team faces. 
+              This helps me provide more targeted insights in our conversation.
+            </p>
+          </div>
         </div>
 
         {/* Unified Contact Panel */}
@@ -178,7 +184,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-footer-foreground/10 border border-footer-foreground/20 text-footer-foreground placeholder:text-footer-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical"
-                  placeholder="How can I support your team?"
+                  placeholder="How can I support your team? What specific learning challenges are you facing?"
                 />
               </div>
 

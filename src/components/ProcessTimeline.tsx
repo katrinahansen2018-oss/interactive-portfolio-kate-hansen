@@ -63,7 +63,7 @@ const ProcessTimeline = () => {
   const [selectedStep, setSelectedStep] = useState<ProcessStep | null>(null);
 
   return (
-    <section id="process" className="py-20 px-6 bg-muted/30">
+    <section id="process" className="py-20 px-6 bg-muted/30" role="main">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -72,32 +72,39 @@ const ProcessTimeline = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A systematic, evidence-based methodology grounded in learning science and instructional design theory
           </p>
+          <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20 max-w-2xl mx-auto">
+            <p className="text-sm text-foreground">
+              <strong>💭 Consider as you explore:</strong> Which of these phases resonates most with your current project needs? 
+              How might this structured approach benefit your learning initiatives?
+            </p>
+          </div>
         </div>
 
         {/* Interactive Timeline */}
-        <div className="timeline-container">
-          <div className="timeline-line"></div>
+        <div className="timeline-container" role="region" aria-label="Design process timeline">
+          <div className="timeline-line" aria-hidden="true"></div>
           
           {processSteps.map((step, index) => (
             <div key={step.id} className="timeline-item">
-              <div className="timeline-marker"></div>
+              <div className="timeline-marker" aria-hidden="true"></div>
               
               <div className="flex-1">
                 <button
                   onClick={() => setSelectedStep(step)}
                   className="process-card w-full text-left group focus-visible"
-                  aria-label={`Learn more about ${step.title} phase`}
+                  aria-label={`Learn more about ${step.title} phase - ${step.description}`}
+                  aria-describedby={`step-${step.id}-description`}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="text-primary mr-4 group-hover:scale-110 transition-transform">
+                    <div className="text-primary mr-4 group-hover:scale-110 transition-transform" aria-hidden="true">
                       {step.icon}
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      {step.title}
+                      Step {index + 1}: {step.title}
                     </h3>
                   </div>
                   
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p id={`step-${step.id}-description`} className="text-muted-foreground mb-4 leading-relaxed">
                     {step.description}
                   </p>
                   

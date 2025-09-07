@@ -5,6 +5,9 @@ import ProcessTimeline from './ProcessTimeline';
 import ValuesSection from './ValuesSection';
 import PortfolioGallery from './PortfolioGallery';
 import ContactSection from './ContactSection';
+import SkipToContent from './SkipToContent';
+import FeedbackWidget from './FeedbackWidget';
+import ProgressIndicator from './ProgressIndicator';
 
 const InstructionalDesignPortfolio = () => {
   useEffect(() => {
@@ -29,11 +32,17 @@ const InstructionalDesignPortfolio = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Skip to Content Link */}
+      <SkipToContent />
+      
       {/* Sticky Navigation */}
       <StickyNav />
 
+      {/* Progress Indicator */}
+      <ProgressIndicator />
+
       {/* Main Content */}
-      <main>
+      <main id="main-content" role="main">
         {/* Hero Section with Interactive Choices */}
         <HeroSection 
           onNavigateToProcess={handleNavigateToProcess}
@@ -52,6 +61,9 @@ const InstructionalDesignPortfolio = () => {
         {/* Contact & Connect */}
         <ContactSection />
       </main>
+
+      {/* Feedback Widget */}
+      <FeedbackWidget />
     </div>
   );
 };
