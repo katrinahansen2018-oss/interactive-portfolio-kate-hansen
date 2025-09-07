@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Send, Calendar, Download, Linkedin, Mail, Phone, CheckCircle } from 'lucide-react';
+import { Send, Calendar, Download, Linkedin, Mail, Phone, CheckCircle, Copy } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,6 +27,32 @@ const ContactSection = () => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
     }, 3000);
+  };
+
+  const handleEmailClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    const email = 'katrina.hansen2018@gmail.com';
+    
+    // Try mailto first
+    try {
+      window.location.href = `mailto:${email}`;
+      // If we get here, assume mailto worked
+    } catch (error) {
+      // If mailto fails, copy to clipboard
+      try {
+        await navigator.clipboard.writeText(email);
+        toast({
+          title: "Email copied to clipboard",
+          description: "Since your email client couldn't be opened, the email address has been copied for you.",
+        });
+      } catch (clipboardError) {
+        toast({
+          title: "Unable to open email client",
+          description: "Please email katrina.hansen2018@gmail.com directly.",
+          variant: "destructive",
+        });
+      }
+    }
   };
 
   return (
@@ -54,7 +82,8 @@ const ContactSection = () => {
                 href="https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68bb742fb1299602325678ff/1757115439672/Kate+Hansen+e-Learning+Developer+CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
+                title="Opens PDF in new tab"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
@@ -64,19 +93,21 @@ const ContactSection = () => {
                 href="https://www.linkedin.com/in/kate-hansen-med-8a48bb25"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-footer-foreground/10 hover:bg-footer-foreground/20 text-footer-foreground font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center border border-footer-foreground/20"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
+                title="Opens LinkedIn profile in new tab"
               >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn Profile
               </a>
               
-              <a 
-                href="mailto:katrina.hansen2018@gmail.com"
+              <button 
+                onClick={handleEmailClick}
                 className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
+                title="Opens your email client or copies email to clipboard"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Connect via Email
-              </a>
+              </button>
             </div>
 
             {/* Contact Information */}
@@ -103,7 +134,7 @@ const ContactSection = () => {
                 Response Time
               </h4>
               <p className="text-footer-foreground/80 text-sm leading-relaxed">
-                I typically respond to employment and collaboration inquiries within 24 hours. For urgent matters, please mention this in your message.
+                I will respond within 24 hours. For urgent matters, please mention this in your message.
               </p>
             </div>
           </div>
