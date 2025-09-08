@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
 import StickyNav from './StickyNav';
 import HeroSection from './HeroSection';
-import ProcessTimeline from './ProcessTimeline';
 import ValuesSection from './ValuesSection';
 import PortfolioGallery from './PortfolioGallery';
 import ContactSection from './ContactSection';
 import SkipToContent from './SkipToContent';
 import FeedbackWidget from './FeedbackWidget';
-import ProgressIndicator from './ProgressIndicator';
 
 const InstructionalDesignPortfolio = () => {
   useEffect(() => {
@@ -22,8 +20,8 @@ const InstructionalDesignPortfolio = () => {
     }
   };
 
-  const handleNavigateToProcess = () => {
-    scrollToSection('#process');
+  const handleNavigateToValues = () => {
+    scrollToSection('#values');
   };
 
   const handleNavigateToPortfolio = () => {
@@ -38,19 +36,13 @@ const InstructionalDesignPortfolio = () => {
       {/* Sticky Navigation */}
       <StickyNav />
 
-      {/* Progress Indicator */}
-      <ProgressIndicator />
-
       {/* Main Content */}
       <main id="main-content" role="main">
         {/* Hero Section with Interactive Choices */}
         <HeroSection 
-          onNavigateToProcess={handleNavigateToProcess}
+          onNavigateToProcess={handleNavigateToValues}
           onNavigateToPortfolio={handleNavigateToPortfolio}
         />
-
-        {/* Design Process Timeline */}
-        <ProcessTimeline />
 
         {/* Instructional Values */}
         <ValuesSection />

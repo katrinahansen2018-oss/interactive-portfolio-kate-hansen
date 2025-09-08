@@ -9,20 +9,6 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
 
   return (
     <section id="hero" className="hero-section-new" role="banner">
-      {/* Background Video */}
-      <video
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden="true"
-        aria-label="Background video"
-      >
-        <source src="/placeholder-video.mp4" type="video/mp4" />
-        <track kind="captions" src="/captions/hero-video.vtt" srcLang="en" label="English captions" />
-      </video>
-      
       {/* Semi-transparent overlay */}
       <div className="hero-overlay" />
       
@@ -46,10 +32,10 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           <button 
             onClick={onNavigateToProcess}
             className="hero-button"
-            aria-label="Explore my design process - Learn about my systematic approach to instructional design"
+            aria-label="Explore my instructional design values and approach"
           >
             <Play className="w-5 h-5 mr-3" aria-hidden="true" />
-            Explore my Design Process
+            Experience My Design Work
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
           
@@ -59,7 +45,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
             aria-label="Browse my portfolio samples - View examples of my learning solutions"
           >
             <Target className="w-5 h-5 mr-3" aria-hidden="true" />
-            Browse my Portfolio         
+            Explore Portfolio Samples         
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
         </div>
