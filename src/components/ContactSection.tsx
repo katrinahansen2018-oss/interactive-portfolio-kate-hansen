@@ -42,12 +42,6 @@ const ContactSection = () => {
             <br />
             I welcome the opportunity to discuss how I can contribute to your team.
           </p>
-          <div className="mt-6 p-4 bg-footer-foreground/10 rounded-lg border border-footer-foreground/20 max-w-2xl mx-auto">
-            <p className="text-sm text-footer-foreground">
-              <strong>💡 Before reaching out:</strong> Consider what specific learning challenges your team faces. 
-              This helps me provide more targeted insights in our conversation.
-            </p>
-          </div>
         </div>
 
         {/* Unified Contact Panel */}
