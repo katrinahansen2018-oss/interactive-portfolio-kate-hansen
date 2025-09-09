@@ -7,7 +7,7 @@ import PortfolioGallery from './PortfolioGallery';
 import ContactSection from './ContactSection';
 import SkipToContent from './SkipToContent';
 import FeedbackWidget from './FeedbackWidget';
-
+import ProgressIndicator from './ProgressIndicator';
 
 const InstructionalDesignPortfolio = () => {
   useEffect(() => {
@@ -38,6 +38,8 @@ const InstructionalDesignPortfolio = () => {
       {/* Sticky Navigation */}
       <StickyNav />
 
+      {/* Progress Indicator */}
+      <ProgressIndicator />
 
       {/* Main Content */}
       <main id="main-content" role="main">
