@@ -46,20 +46,20 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
           <button 
             onClick={onNavigateToProcess}
             className="hero-button"
-            aria-label="Explore my design process - Learn about my systematic approach to instructional design"
+            aria-label="Experience my design work - Learn about my systematic approach to instructional design"
           >
             <Play className="w-5 h-5 mr-3" aria-hidden="true" />
-            Explore my Design Process
+            Experience My Design Work
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
           
           <button 
             onClick={onNavigateToPortfolio}
             className="hero-button"
-            aria-label="Browse my portfolio samples - View examples of my learning solutions"
+            aria-label="Explore portfolio samples - View examples of my learning solutions"
           >
             <Target className="w-5 h-5 mr-3" aria-hidden="true" />
-            Browse my Portfolio         
+            Explore Portfolio Samples
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
         </div>
