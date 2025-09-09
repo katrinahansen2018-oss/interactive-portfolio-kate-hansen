@@ -61,28 +61,6 @@ const processSteps: ProcessStep[] = [
 
 const ProcessTimeline = () => {
   const [selectedStep, setSelectedStep] = useState<ProcessStep | null>(null);
-  const [viewedSteps, setViewedSteps] = useState<Set<string>>(new Set());
-
-  const handleStepClick = (step: ProcessStep, index: number) => {
-    // Only allow sequential progression
-    if (index === 0 || viewedSteps.has(processSteps[index - 1].id)) {
-      setSelectedStep(step);
-      const newViewedSteps = new Set(viewedSteps);
-      newViewedSteps.add(step.id);
-      setViewedSteps(newViewedSteps);
-      
-      // Emit event for ProgressIndicator
-      window.dispatchEvent(new CustomEvent('process-step-progress', {
-        detail: { stepIndex: index }
-      }));
-    }
-  };
-
-  // Reset progress when component unmounts or resets
-  const resetProgress = () => {
-    setViewedSteps(new Set());
-    window.dispatchEvent(new CustomEvent('process-step-reset'));
-  };
 
   return (
     <section id="process" className="py-20 px-6 bg-muted/30" role="main">
@@ -94,6 +72,12 @@ const ProcessTimeline = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A systematic, evidence-based methodology grounded in learning science and instructional design theory
           </p>
+          <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20 max-w-2xl mx-auto">
+            <p className="text-sm text-foreground">
+              <strong>💭 Consider as you explore:</strong> Which of these phases resonates most with your current project needs? 
+              How might this structured approach benefit your learning initiatives?
+            </p>
+          </div>
         </div>
 
         {/* Interactive Timeline */}
@@ -106,13 +90,8 @@ const ProcessTimeline = () => {
               
               <div className="flex-1">
                 <button
-                  onClick={() => handleStepClick(step, index)}
-                  disabled={index > 0 && !viewedSteps.has(processSteps[index - 1].id)}
-                  className={`process-card w-full text-left group focus-visible ${
-                    index > 0 && !viewedSteps.has(processSteps[index - 1].id) 
-                      ? 'opacity-50 cursor-not-allowed' 
-                      : ''
-                  } ${viewedSteps.has(step.id) ? 'ring-2 ring-primary/20' : ''}`}
+                  onClick={() => setSelectedStep(step)}
+                  className="process-card w-full text-left group focus-visible"
                   aria-label={`Learn more about ${step.title} phase - ${step.description}`}
                   aria-describedby={`step-${step.id}-description`}
                 >
