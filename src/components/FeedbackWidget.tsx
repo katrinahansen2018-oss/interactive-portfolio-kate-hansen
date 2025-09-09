@@ -1,23 +1,57 @@
 import { useState } from 'react';
 import { MessageCircle, ThumbsUp, ThumbsDown, X, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const FeedbackWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [rating, setRating] = useState<'helpful' | 'not-helpful' | null>(null);
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
 
-  const handleFormSubmit = () => {
-    // Show success message
-    setIsSubmitted(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsSubmitted(false);
-      setRating(null);
-      setComment('');
-    }, 3000);
+    const formData = new FormData();
+    formData.append('rating', rating || '');
+    formData.append('comment', comment);
+    formData.append('page', window.location.href);
+    formData.append('_subject', 'Portfolio Feedback Submission');
+    formData.append('_captcha', 'false');
+    formData.append('_template', 'box');
+
+    try {
+      const response = await fetch('https://formsubmit.co/katrina.hansen2018@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Thank you for your feedback!",
+          description: "Your message has been sent successfully.",
+        });
+        
+        setTimeout(() => {
+          setIsOpen(false);
+          setIsSubmitted(false);
+          setRating(null);
+          setComment('');
+        }, 3000);
+      } else {
+        throw new Error('Failed to submit feedback');
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending feedback",
+        description: "Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -46,19 +80,7 @@ const FeedbackWidget = () => {
           </div>
 
           {!isSubmitted ? (
-            <form 
-              action="https://formsubmit.co/katrina.hansen2018@gmail.com" 
-              method="POST"
-              onSubmit={handleFormSubmit}
-              className="space-y-4"
-            >
-              {/* FormSubmit Configuration */}
-              <input type="hidden" name="_subject" value="Portfolio Feedback Submission" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="box" />
-              <input type="hidden" name="_next" value={window.location.href} />
-
-              {/* Rating Selection */}
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex space-x-2">
                 <button
                   type="button"
@@ -86,11 +108,6 @@ const FeedbackWidget = () => {
                 </button>
               </div>
 
-              {/* Hidden input for rating */}
-              <input type="hidden" name="rating" value={rating || ''} />
-              <input type="hidden" name="page" value={window.location.href} />
-
-              {/* Optional comment */}
               <div>
                 <label 
                   htmlFor="feedback-comment"
@@ -100,7 +117,6 @@ const FeedbackWidget = () => {
                 </label>
                 <textarea
                   id="feedback-comment"
-                  name="comment"
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   placeholder="How could this experience be improved?"
@@ -109,7 +125,6 @@ const FeedbackWidget = () => {
                 />
               </div>
 
-              {/* Submit button - only requires rating, comment is optional */}
               <button
                 type="submit"
                 disabled={!rating}

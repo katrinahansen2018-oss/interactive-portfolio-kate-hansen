@@ -16,6 +16,7 @@ const StickyNav = () => {
 
   const navLinks = [
     { href: '#hero', label: 'Home' },
+    { href: '#process', label: 'Process' },
     { href: '#values', label: 'Values' },
     { href: '#portfolio', label: 'Portfolio' },
     { href: '#connect', label: 'Connect' },
