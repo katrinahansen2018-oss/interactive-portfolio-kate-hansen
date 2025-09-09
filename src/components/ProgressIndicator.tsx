@@ -17,29 +17,29 @@ const ProgressIndicator = () => {
   ]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const processSection = document.querySelector('#process');
-      if (!processSection) return;
-
-      const processRect = processSection.getBoundingClientRect();
-      const sectionHeight = processRect.height;
-      const viewportHeight = window.innerHeight;
-      
-      if (processRect.top <= viewportHeight * 0.5 && processRect.bottom >= viewportHeight * 0.5) {
-        const scrollProgress = Math.max(0, Math.min(1, (viewportHeight * 0.5 - processRect.top) / (sectionHeight - viewportHeight)));
-        const newCurrentStep = Math.floor(scrollProgress * steps.length);
-        
-        setCurrentStep(newCurrentStep);
-        setSteps(prev => prev.map((step, index) => ({
-          ...step,
-          completed: index <= newCurrentStep
-        })));
-      }
+    // Listen for custom events from ProcessTimeline for sequential progression
+    const handleStepProgress = (event: CustomEvent) => {
+      const { stepIndex } = event.detail;
+      setCurrentStep(stepIndex);
+      setSteps(prev => prev.map((step, index) => ({
+        ...step,
+        completed: index <= stepIndex
+      })));
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [steps.length]);
+    const handleStepReset = () => {
+      setCurrentStep(0);
+      setSteps(prev => prev.map(step => ({ ...step, completed: false })));
+    };
+
+    window.addEventListener('process-step-progress', handleStepProgress as EventListener);
+    window.addEventListener('process-step-reset', handleStepReset as EventListener);
+    
+    return () => {
+      window.removeEventListener('process-step-progress', handleStepProgress as EventListener);
+      window.removeEventListener('process-step-reset', handleStepReset as EventListener);
+    };
+  }, []);
 
   return (
     <div className="fixed left-6 top-1/2 transform -translate-y-1/2 z-30 hidden lg:block">

@@ -9,20 +9,49 @@ const FeedbackWidget = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    toast({
-      title: "Thank you for your feedback!",
-      description: "Your input helps me continuously improve this portfolio experience.",
-    });
     
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsSubmitted(false);
-      setRating(null);
-      setComment('');
-    }, 2000);
+    const formData = new FormData();
+    formData.append('rating', rating || '');
+    formData.append('comment', comment);
+    formData.append('page', window.location.href);
+    formData.append('_subject', 'Portfolio Feedback Submission');
+    formData.append('_captcha', 'false');
+    formData.append('_template', 'box');
+
+    try {
+      const response = await fetch('https://formsubmit.co/katrina.hansen2018@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Thank you for your feedback!",
+          description: "Your message has been sent successfully.",
+        });
+        
+        setTimeout(() => {
+          setIsOpen(false);
+          setIsSubmitted(false);
+          setRating(null);
+          setComment('');
+        }, 3000);
+      } else {
+        throw new Error('Failed to submit feedback');
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending feedback",
+        description: "Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
