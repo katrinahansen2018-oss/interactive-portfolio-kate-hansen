@@ -49,7 +49,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
             aria-label="Explore my design process - Learn about my systematic approach to instructional design"
           >
             <Play className="w-5 h-5 mr-3" aria-hidden="true" />
-            Explore my Design Process
+            Experience My Design Work
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
           
@@ -59,7 +59,7 @@ const HeroSection = ({ onNavigateToProcess, onNavigateToPortfolio }: HeroSection
             aria-label="Browse my portfolio samples - View examples of my learning solutions"
           >
             <Target className="w-5 h-5 mr-3" aria-hidden="true" />
-            Browse my Portfolio         
+            Explore Portfolio Samples         
             <ArrowRight className="w-5 h-5 ml-3" aria-hidden="true" />
           </button>
         </div>
