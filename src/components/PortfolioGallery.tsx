@@ -63,12 +63,6 @@ const PortfolioGallery = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Learning solutions that demonstrate my approach to effective instructional design
           </p>
-          <div className="mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20 max-w-2xl mx-auto">
-            <p className="text-sm text-foreground">
-              <strong>🎯 Reflection:</strong> As you explore these projects, consider which approaches might work for your learners. 
-              What resonates with your training goals?
-            </p>
-          </div>
         </div>
 
         {/* Project Grid */}
