@@ -64,18 +64,10 @@ const ProcessTimeline = () => {
   const [viewedSteps, setViewedSteps] = useState<Set<string>>(new Set());
 
   const handleStepClick = (step: ProcessStep, index: number) => {
-    // Only allow sequential progression
-    if (index === 0 || viewedSteps.has(processSteps[index - 1].id)) {
-      setSelectedStep(step);
-      const newViewedSteps = new Set(viewedSteps);
-      newViewedSteps.add(step.id);
-      setViewedSteps(newViewedSteps);
-      
-      // Emit event for ProgressIndicator
-      window.dispatchEvent(new CustomEvent('process-step-progress', {
-        detail: { stepIndex: index }
-      }));
-    }
+    setSelectedStep(step);
+    const newViewedSteps = new Set(viewedSteps);
+    newViewedSteps.add(step.id);
+    setViewedSteps(newViewedSteps);
   };
 
   // Reset progress when component unmounts or resets
@@ -107,12 +99,7 @@ const ProcessTimeline = () => {
               <div className="flex-1">
                 <button
                   onClick={() => handleStepClick(step, index)}
-                  disabled={index > 0 && !viewedSteps.has(processSteps[index - 1].id)}
-                  className={`process-card w-full text-left group focus-visible ${
-                    index > 0 && !viewedSteps.has(processSteps[index - 1].id) 
-                      ? 'opacity-50 cursor-not-allowed' 
-                      : ''
-                  } ${viewedSteps.has(step.id) ? 'ring-2 ring-primary/20' : ''}`}
+                  className={`process-card w-full text-left group focus-visible ${viewedSteps.has(step.id) ? 'ring-2 ring-primary/20' : ''}`}
                   aria-label={`Learn more about ${step.title} phase - ${step.description}`}
                   aria-describedby={`step-${step.id}-description`}
                 >
