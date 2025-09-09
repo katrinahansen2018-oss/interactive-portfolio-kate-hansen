@@ -63,7 +63,7 @@ const StickyNav = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-foreground hover:text-primary transition-colors focus-visible p-2"
+          className="md:hidden text-primary hover:text-primary/80 transition-colors focus-visible p-2 border border-primary rounded-md"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
