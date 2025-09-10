@@ -47,7 +47,7 @@ const values: Value[] = [
     icon: <Heart className="w-8 h-8" />,
     description: 'Centering learner needs, emotions, and real-world contexts in every design decision.',
     fullExplanation: 'Behind every learning objective is a human with goals, fears, constraints, and aspirations. I prioritize deep empathy by conducting learner interviews, creating personas, and factoring in emotional and cognitive needs to design resonant experiences.\n\nProject Example: In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.',
-    audioNote: 'Emotional design has been key to making my courses memorable. I\'ve learned that addressing learners\' frustrations (like tech anxiety) with supportive elements, like relatable scenarios, creates deeper connections. This approach turns potential overwhelm into motivation, as seen when a simple empathy map revealed pain points in a time management module, leading to more engaging, stress-reducing content.',
+    audioNote: 'In my design methodology, I draw directly from learning science, like cognitive load theory to avoid overwhelming learners and Mayer\'s multimedia principles for effective visuals. For instance, I use spaced repetition and feedback loops to boost retention, as seen in my courses where analytics show improved outcomes. This evidence-based approach ensures my work is not just intuitive but proven, allowing continual refinement for real impact.',
     projectLink: '#portfolio'
   },
   {
@@ -159,7 +159,7 @@ const ValuesSection = () => {
                 {expandedValue.id !== 'udl' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      {expandedValue.id === 'continuous-improvement' ? (
+                      {expandedValue.id === 'continuous-improvement' || expandedValue.id === 'empathy' || expandedValue.id === 'evidence-based' ? (
                         <RotateCcw className="w-5 h-5 mr-2" />
                       ) : expandedValue.id === 'purposeful' ? (
                         <Target className="w-5 h-5 mr-2" />
@@ -171,7 +171,7 @@ const ValuesSection = () => {
                       {expandedValue.audioNote}
                     </p>
                     
-                    {expandedValue.id !== 'continuous-improvement' && (
+                    {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'empathy' && expandedValue.id !== 'evidence-based' && (
                       <>
                         {expandedValue.videoLink ? (
                           <a 
