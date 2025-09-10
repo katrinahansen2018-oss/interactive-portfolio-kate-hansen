@@ -165,7 +165,7 @@ const ValuesSection = () => {
                         <Target className="w-5 h-5 mr-2" />
                       ) : (
                         <Video className="w-5 h-5 mr-2" />
-                      )} {expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' ? 'Example' : 'Reflection'}
+                      )} {expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' || expandedValue.id === 'empathy' ? 'Example' : 'Reflection'}
                     </h4>
                     <p className="text-muted-foreground text-sm mb-4">
                       {expandedValue.audioNote}
