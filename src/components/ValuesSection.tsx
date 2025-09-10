@@ -55,8 +55,8 @@ const values: Value[] = [
     title: 'Evidence-Based Practice',
     icon: <Lightbulb className="w-8 h-8" />,
     description: 'Grounding design decisions in learning science research and measurable outcomes.',
-    fullExplanation: 'Every design choice I make is backed by research in cognitive science, educational psychology, and learning analytics. I stay current with emerging research and translate complex academic findings into practical, effective learning solutions that deliver measurable results.\n\nProject Example: In my "Cybersecurity Awareness" microlearning course, I applied cognitive load theory and multimedia research to create scenario-driven interactions that optimize retention without overload. WCAG 2.2 compliance ensured accessibility, with analytics-driven iterations improving engagement by addressing real learner data.',
-    audioNote: 'In my design methodology, I draw directly from learning science, like cognitive load theory to avoid overwhelming learners and Mayer\'s multimedia principles for effective visuals. For instance, I use spaced repetition and feedback loops to boost retention, as seen in my courses where analytics show improved outcomes. This evidence-based approach ensures my work is not just intuitive but proven, allowing continual refinement for real impact.',
+    fullExplanation: 'Every design choice I make is backed by research in cognitive science, educational psychology, and learning analytics. I stay current with emerging research and translate complex academic findings into practical, effective learning solutions that deliver measurable results.',
+    audioNote: 'Project Example: In my "Cybersecurity Awareness" microlearning course, I applied cognitive load theory and multimedia research to create scenario-driven interactions that optimize retention without overload. WCAG 2.2 compliance ensured accessibility, with analytics-driven iterations improving engagement by addressing real learner data.',
     projectLink: '#portfolio'
   },
   {
