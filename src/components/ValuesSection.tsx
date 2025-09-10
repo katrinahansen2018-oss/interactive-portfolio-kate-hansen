@@ -46,8 +46,8 @@ const values: Value[] = [
     title: 'Human-Centered Empathy',
     icon: <Heart className="w-8 h-8" />,
     description: 'Centering learner needs, emotions, and real-world contexts in every design decision.',
-    fullExplanation: 'Behind every learning objective is a human with goals, fears, constraints, and aspirations. I prioritize deep empathy by conducting learner interviews, creating personas, and factoring in emotional and cognitive needs to design resonant experiences.\n\nProject Example: In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.',
-    audioNote: 'In my design methodology, I draw directly from learning science, like cognitive load theory to avoid overwhelming learners and Mayer\'s multimedia principles for effective visuals. For instance, I use spaced repetition and feedback loops to boost retention, as seen in my courses where analytics show improved outcomes. This evidence-based approach ensures my work is not just intuitive but proven, allowing continual refinement for real impact.',
+    fullExplanation: 'Behind every learning objective is a human with goals, fears, constraints, and aspirations. I prioritize deep empathy by conducting learner interviews, creating personas, and factoring in emotional and cognitive needs to design resonant experiences.',
+    audioNote: 'In "Brightspace Essentials," I incorporated an adult learner character ("an adult learner just like you") for scenario-based navigation tasks, empathizing with common frustrations to build confidence and reduce tech anxiety through relatable, self-paced guidance.',
     projectLink: '#portfolio'
   },
   {
@@ -56,7 +56,7 @@ const values: Value[] = [
     icon: <Lightbulb className="w-8 h-8" />,
     description: 'Grounding design decisions in learning science research and measurable outcomes.',
     fullExplanation: 'Every design choice I make is backed by research in cognitive science, educational psychology, and learning analytics. I stay current with emerging research and translate complex academic findings into practical, effective learning solutions that deliver measurable results.',
-    audioNote: 'Project Example: In my "Cybersecurity Awareness" microlearning course, I applied cognitive load theory and multimedia research to create scenario-driven interactions that optimize retention without overload. WCAG 2.2 compliance ensured accessibility, with analytics-driven iterations improving engagement by addressing real learner data.',
+    audioNote: 'In my "Cybersecurity Awareness" microlearning course, I applied cognitive load theory and multimedia research to create scenario-driven interactions that optimize retention without overload. WCAG 2.2 compliance ensured accessibility, with analytics-driven iterations improving engagement by addressing real learner data.',
     projectLink: '#portfolio'
   },
   {
@@ -159,13 +159,13 @@ const ValuesSection = () => {
                 {expandedValue.id !== 'udl' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      {expandedValue.id === 'continuous-improvement' || expandedValue.id === 'empathy' || expandedValue.id === 'evidence-based' ? (
+                      {expandedValue.id === 'continuous-improvement' || expandedValue.id === 'empathy' ? (
                         <RotateCcw className="w-5 h-5 mr-2" />
-                      ) : expandedValue.id === 'purposeful' ? (
+                      ) : expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' ? (
                         <Target className="w-5 h-5 mr-2" />
                       ) : (
                         <Video className="w-5 h-5 mr-2" />
-                      )} {expandedValue.id === 'purposeful' ? 'Example' : 'Reflection'}
+                      )} {expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' ? 'Example' : 'Reflection'}
                     </h4>
                     <p className="text-muted-foreground text-sm mb-4">
                       {expandedValue.audioNote}
