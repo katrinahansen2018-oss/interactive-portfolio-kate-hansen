@@ -159,9 +159,9 @@ const ValuesSection = () => {
                 {expandedValue.id !== 'udl' && (
                   <div className="bg-secondary/20 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      {expandedValue.id === 'continuous-improvement' || expandedValue.id === 'empathy' ? (
+                      {expandedValue.id === 'continuous-improvement' ? (
                         <RotateCcw className="w-5 h-5 mr-2" />
-                      ) : expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' ? (
+                      ) : expandedValue.id === 'purposeful' || expandedValue.id === 'evidence-based' || expandedValue.id === 'empathy' ? (
                         <Target className="w-5 h-5 mr-2" />
                       ) : (
                         <Video className="w-5 h-5 mr-2" />
@@ -171,7 +171,7 @@ const ValuesSection = () => {
                       {expandedValue.audioNote}
                     </p>
                     
-                    {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'empathy' && expandedValue.id !== 'evidence-based' && (
+                    {expandedValue.id !== 'continuous-improvement' && expandedValue.id !== 'empathy' && expandedValue.id !== 'evidence-based' && expandedValue.id !== 'purposeful' && (
                       <>
                         {expandedValue.videoLink ? (
                           <a 
