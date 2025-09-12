@@ -194,7 +194,7 @@ const ProcessTimeline = () => {
                    </div>
                    
                    {selectedStep.id === 'implement' ? (
-                     <div className="flex gap-3 mt-4">
+                     <div className="flex justify-between mt-4">
                        <a 
                          href="https://dm37d6ma8nfm4.cloudfront.net/"
                          target="_blank"
