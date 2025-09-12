@@ -194,7 +194,7 @@ const ProcessTimeline = () => {
                    </div>
                    
                    {selectedStep.id === 'implement' ? (
-                     <div className="flex gap-3 mt-4">
+                     <div className="mt-4 space-y-3">
                        <a 
                          href="https://dm37d6ma8nfm4.cloudfront.net/"
                          target="_blank"
@@ -203,14 +203,16 @@ const ProcessTimeline = () => {
                        >
                          View Course →
                        </a>
-                       <a 
-                         href="https://www.surveymonkey.com/r/JJ3K7Y6"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                       >
-                         View Survey →
-                       </a>
+                       <div>
+                         <a 
+                           href="https://www.surveymonkey.com/r/JJ3K7Y6"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                         >
+                           View Survey →
+                         </a>
+                       </div>
                      </div>
                    ) : (
                      <a 
