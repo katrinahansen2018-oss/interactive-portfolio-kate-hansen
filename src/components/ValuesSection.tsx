@@ -221,7 +221,7 @@ const ValuesSection = () => {
                 <div className="flex justify-end">
                   <a
                     href={expandedValue.id === 'continuous-improvement' 
-                      ? 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b629fd40137952a1755afb/1756768765384/Continuous-Improvement-in-Action.pdf'
+                      ? '/documents/Continuous-Improvement-in-Action.pdf'
                       : expandedValue.id === 'udl'
                       ? 'https://d1i5b4vrjc3nqn.cloudfront.net/'
                       : expandedValue.id === 'empathy'
@@ -229,7 +229,7 @@ const ValuesSection = () => {
                       : expandedValue.id === 'evidence-based'
                       ? 'https://d2i0gz0yrz84zc.cloudfront.net/'
                       : expandedValue.id === 'purposeful'
-                      ? 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png'
+                      ? '/documents/Storyboard-D2L.pdf'
                       : '/documents/Accessibility-WCAG-check.pdf'
                     }
                     target="_blank"
