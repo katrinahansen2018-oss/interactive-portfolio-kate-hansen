@@ -54,7 +54,7 @@ const ContactSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <a 
-                href="https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68bb742fb1299602325678ff/1757115439672/Kate+Hansen+e-Learning+Developer+CV.pdf"
+                href="/documents/Kate-Hansen-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
