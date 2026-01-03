@@ -215,11 +215,11 @@ const ProcessTimeline = () => {
                    ) : (
                      <a 
                        href={selectedStep.id === 'design' 
-                         ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a1e74876ffe21d6a338761/1755440968611/ARCS+Framework.pdf"
+                         ? "/documents/ARCS-Framework.pdf"
                          : selectedStep.id === 'evaluate'
                          ? "https://d1sbe1ulbjmadi.cloudfront.net/"
                          : selectedStep.id === 'analyze'
-                         ? "https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68a9fc7573dcbb30d8dc3f54/1755970677448/Needs+Analysis.pdf"
+                         ? "/documents/Needs-Analysis.pdf"
                          : "https://d1v4a0lthjdu12.cloudfront.net/#/"
                        }
                        target="_blank"
