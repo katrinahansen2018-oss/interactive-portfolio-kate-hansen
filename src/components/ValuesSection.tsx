@@ -21,7 +21,7 @@ const values: Value[] = [
     fullExplanation: 'Accessibility isn\'t an afterthought - it\'s woven into every design decision. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
     audioNote: 'Video: Why accessibility makes better learning for everyone, not just those with disabilities',
     projectLink: '#portfolio',
-    videoLink: 'https://www.youtube.com/watch?v=sQrXRemesXE'
+    videoLink: 'https://youtu.be/sQrXRemesXE'
   },
   {
     id: 'continuous-improvement',
