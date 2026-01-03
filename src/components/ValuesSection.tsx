@@ -21,7 +21,7 @@ const values: Value[] = [
     fullExplanation: 'Accessibility isn\'t an afterthought - it\'s woven into every design decision. From WCAG 2.1 compliance to cognitive load considerations, I ensure that learning experiences are truly inclusive. This means considering screen readers, keyboard navigation, color contrast, cognitive processing differences, and diverse technological contexts.',
     audioNote: 'Video: Why accessibility makes better learning for everyone, not just those with disabilities',
     projectLink: '#portfolio',
-    videoLink: 'https://www.kate-hansen.com/hidden-page#accessibility'
+    videoLink: 'https://youtu.be/sQrXRemesXE'
   },
   {
     id: 'continuous-improvement',
@@ -230,7 +230,7 @@ const ValuesSection = () => {
                       ? 'https://d2i0gz0yrz84zc.cloudfront.net/'
                       : expandedValue.id === 'purposeful'
                       ? 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68914d7535a11c54c372f270/1754353014446/Storyboard.png'
-                      : 'https://static1.squarespace.com/static/6874622833139907a7dd4a1c/t/68b61d2d7d5b0e76f2894dac/1756765485651/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf'
+                      : '/documents/Accessibility-WCAG-check.pdf'
                     }
                     target="_blank"
                     rel="noopener noreferrer"
