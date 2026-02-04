@@ -196,7 +196,7 @@ const ContactSection = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-footer-foreground/20">
           <p className="text-footer-foreground/60 text-sm">
-            © 2025 Kate Hansen • E-Learning Developer • Passionate About Learning, Inspired by Possibility
+            © 2026 Kate Hansen • E-Learning Developer • Passionate About Learning, Inspired by Possibility
           </p>
         </div>
       </div>
