@@ -55,7 +55,7 @@ const processSteps: ProcessStep[] = [
     description: 'Measuring impact and iterating for continuous improvement',
     details: 'Evaluate at four levels: learner reaction, learning gains, on‑the‑job behavior, and organizational results.\n\nGather quantitative analytics (completion, scores, time, device, error rates) and qualitative feedback (surveys, interviews, comments).\n\nAnalyze by objective and item to spot gaps, equity/access issues, and points of confusion.\n\nClose the loop: document findings, prioritize fixes, and schedule updates; share a brief readout with stakeholders.',
     theory: 'Measure whether the experience was useful, what was learned, what was applied, and what changed for the organization.\n\nUse both numbers and narratives to make evidence‑based improvements.',
-    imageNote: '/lovable-uploads/50afa303-07ab-48c8-a3c0-7bebd17ab20f.png'
+    imageNote: '/lovable-uploads/evaluate-dashboard.png'
   }
 ];
 
