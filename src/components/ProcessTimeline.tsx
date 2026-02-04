@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Search, PenTool, Code, Rocket, BarChart3, X } from 'lucide-react';
 
+// Import images as ES6 modules for correct base path handling
+import stakeholderInput from '@/assets/images/stakeholder-input.png';
+import arcsFramework from '@/assets/images/arcs-framework.png';
+import developAlex from '@/assets/images/develop-alex.png';
+import implementSurvey from '@/assets/images/implement-survey.png';
+import evaluateDashboard from '@/assets/images/evaluate-dashboard.png';
+
 interface ProcessStep {
   id: string;
   title: string;
@@ -19,7 +26,7 @@ const processSteps: ProcessStep[] = [
     description: 'Conducting thorough needs analysis and learner profiling',
     details: 'I begin every project with comprehensive stakeholder interviews, learning environment analysis, and performance gap identification. This phase involves gathering data through surveys, interviews, and observation to understand the current state and desired outcomes.',
     theory: 'Grounded in needs assessment and performance analysis, I classify the type of learning outcomes required (such as intellectual skills, strategies, knowledge, behaviors, or attitudes). This ensures the training objectives are clear and directly aligned with performance needs, compliance requirements, and the instructional strategies chosen in the next phase.',
-    imageNote: '/lovable-uploads/stakeholder-input.png'
+    imageNote: stakeholderInput
   },
   {
     id: 'design',
@@ -28,7 +35,7 @@ const processSteps: ProcessStep[] = [
     description: 'Creating learner-centered instructional strategies and blueprints',
     details: 'Using evidence-based design principles, I create detailed storyboards, interaction maps, and assessment strategies. This phase emphasizes Universal Design for Learning (UDL) principles to ensure accessibility and engagement for diverse learners.',
     theory: 'Merrill\'s First Principles of Instruction guide my design decisions, ensuring activation of prior knowledge, demonstration of skills, application opportunities, and integration into real-world contexts.',
-    imageNote: '/lovable-uploads/arcs-framework.png'
+    imageNote: arcsFramework
   },
   {
     id: 'develop',
@@ -37,7 +44,7 @@ const processSteps: ProcessStep[] = [
     description: 'Building interactive learning experiences with modern tools',
     details: 'I develop content using industry-standard authoring tools like Articulate Storyline, Adobe Captivate, and custom HTML5/JavaScript solutions. Focus on responsive design, accessibility compliance (WCAG 2.1), and engaging multimedia integration.',
     theory: 'Cognitive Load Theory informs my multimedia design decisions, balancing visual and auditory channels while minimizing extraneous cognitive load through clean, purposeful interface design.',
-    imageNote: '/lovable-uploads/develop-alex.png'
+    imageNote: developAlex
   },
   {
     id: 'implement',
@@ -46,7 +53,7 @@ const processSteps: ProcessStep[] = [
     description: 'Deploying solutions with comprehensive support strategies',
     details: 'Plan the rollout with a small pilot, incorporate feedback, then scale.\n\nPrepare facilitators/admins with quick-start guides and short training.\n\nOnboard learners with clear instructions, FAQs, and support channels.\n\nProvide change support: comms plan, champions, and help desk workflows.\n\nDeliver implementation guides, troubleshooting resources, and a simple feedback loop (surveys, in-app prompts, issue log).',
     theory: 'Focus on stakeholder buy‑in, clear communication, and removing barriers so the new learning experience is easy to adopt.\n\nShow quick wins, share progress, and keep momentum until new practices become standard.',
-    imageNote: '/lovable-uploads/implement-survey.png'
+    imageNote: implementSurvey
   },
   {
     id: 'evaluate',
@@ -55,7 +62,7 @@ const processSteps: ProcessStep[] = [
     description: 'Measuring impact and iterating for continuous improvement',
     details: 'Evaluate at four levels: learner reaction, learning gains, on‑the‑job behavior, and organizational results.\n\nGather quantitative analytics (completion, scores, time, device, error rates) and qualitative feedback (surveys, interviews, comments).\n\nAnalyze by objective and item to spot gaps, equity/access issues, and points of confusion.\n\nClose the loop: document findings, prioritize fixes, and schedule updates; share a brief readout with stakeholders.',
     theory: 'Measure whether the experience was useful, what was learned, what was applied, and what changed for the organization.\n\nUse both numbers and narratives to make evidence‑based improvements.',
-    imageNote: '/lovable-uploads/evaluate-dashboard.png'
+    imageNote: evaluateDashboard
   }
 ];
 
