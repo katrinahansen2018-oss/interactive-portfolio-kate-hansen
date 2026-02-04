@@ -219,7 +219,7 @@ const ProcessTimeline = () => {
                          : selectedStep.id === 'evaluate'
                          ? "https://d1sbe1ulbjmadi.cloudfront.net/"
                          : selectedStep.id === 'analyze'
-                         ? "/documents/Needs-Analysis.pdf"
+                         ? "https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Needs-Analysis.pdf"
                          : "https://d1v4a0lthjdu12.cloudfront.net/#/"
                        }
                        target="_blank"
