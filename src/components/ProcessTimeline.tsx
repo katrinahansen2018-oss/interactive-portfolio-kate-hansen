@@ -19,7 +19,7 @@ const processSteps: ProcessStep[] = [
     description: 'Conducting thorough needs analysis and learner profiling',
     details: 'I begin every project with comprehensive stakeholder interviews, learning environment analysis, and performance gap identification. This phase involves gathering data through surveys, interviews, and observation to understand the current state and desired outcomes.',
     theory: 'Grounded in needs assessment and performance analysis, I classify the type of learning outcomes required (such as intellectual skills, strategies, knowledge, behaviors, or attitudes). This ensures the training objectives are clear and directly aligned with performance needs, compliance requirements, and the instructional strategies chosen in the next phase.',
-    imageNote: '/lovable-uploads/60813e46-06d5-4519-b680-1d2e547929ad.png'
+    imageNote: '/lovable-uploads/stakeholder-input.png'
   },
   {
     id: 'design',
