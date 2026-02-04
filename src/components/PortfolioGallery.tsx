@@ -1,5 +1,10 @@
 import { ExternalLink } from 'lucide-react';
 
+// Import images as ES6 modules for correct base path handling
+import cybersecurityThumb from '@/assets/images/cybersecurity-thumb.png';
+import timeManagementThumb from '@/assets/images/time-management-thumb.png';
+import brightspaceThumb from '@/assets/images/brightspace-thumb.png';
+
 interface Project {
   id: string;
   title: string;
@@ -19,7 +24,7 @@ const projects: Project[] = [
     title: 'Cybersecurity Awareness',
     category: 'E-Learning',
     tagline: 'Interactive, inclusive training for digital vigilance',
-    thumbnail: '/lovable-uploads/1244be3d-f796-4af6-a485-df2795589444.png',
+    thumbnail: cybersecurityThumb,
     challenge: 'Employees needed practical cybersecurity knowledge to protect organizational data while maintaining productivity and confidence in digital tools.',
     process: 'Developed scenario-based microlearning modules focusing on real-world threats and practical responses. Applied cognitive load theory and multimedia principles to create engaging, memorable experiences.',
     solution: 'Interactive e-learning course with scenario-driven interactions, immediate feedback, and practical application exercises. WCAG 2.2 compliant with analytics-driven iterations.',
@@ -31,7 +36,7 @@ const projects: Project[] = [
     title: 'Time Management Strategies',
     category: 'Instructor-Led',
     tagline: 'Building sustainable, stress-free productivity habits',
-    thumbnail: '/lovable-uploads/c3ed626d-d2f9-4f6e-8b75-3c0a9a20a522.png',
+    thumbnail: timeManagementThumb,
     challenge: 'Professionals struggled with time management and productivity while experiencing high levels of stress and overwhelm.',
     process: 'Created empathy-driven learning experiences that addressed common frustrations and tech anxiety. Incorporated relatable scenarios and supportive elements to build confidence.',
     solution: 'Comprehensive time management program with practical tools, stress-reduction techniques, and sustainable habit-building strategies.',
@@ -43,7 +48,7 @@ const projects: Project[] = [
     title: 'D2L Brightspace Essentials',
     category: 'Video',
     tagline: 'Building digital literacy through practical Brightspace use',
-    thumbnail: '/lovable-uploads/70f90cd0-5f12-404b-82b3-e966a49a6dc2.png',
+    thumbnail: brightspaceThumb,
     challenge: 'Adult learners needed confidence and practical skills to navigate Brightspace effectively while managing tech anxiety.',
     process: 'Incorporated adult learner characters and scenario-based navigation tasks. Focused on empathizing with common frustrations to build confidence through relatable, self-paced guidance.',
     solution: 'Interactive video series with adult learner personas, practical navigation exercises, and confidence-building activities designed to reduce tech anxiety.',
