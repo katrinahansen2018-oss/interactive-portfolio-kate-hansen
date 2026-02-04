@@ -46,7 +46,7 @@ const processSteps: ProcessStep[] = [
     description: 'Deploying solutions with comprehensive support strategies',
     details: 'Plan the rollout with a small pilot, incorporate feedback, then scale.\n\nPrepare facilitators/admins with quick-start guides and short training.\n\nOnboard learners with clear instructions, FAQs, and support channels.\n\nProvide change support: comms plan, champions, and help desk workflows.\n\nDeliver implementation guides, troubleshooting resources, and a simple feedback loop (surveys, in-app prompts, issue log).',
     theory: 'Focus on stakeholder buy‑in, clear communication, and removing barriers so the new learning experience is easy to adopt.\n\nShow quick wins, share progress, and keep momentum until new practices become standard.',
-    imageNote: '/lovable-uploads/2eaac6fb-3414-45d8-9e4b-8e03e29ddf82.png'
+    imageNote: '/lovable-uploads/implement-survey.png'
   },
   {
     id: 'evaluate',
