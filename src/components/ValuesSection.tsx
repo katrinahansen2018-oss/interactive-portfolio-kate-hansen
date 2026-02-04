@@ -221,7 +221,7 @@ const ValuesSection = () => {
                 <div className="flex justify-end">
                   <a
                     href={expandedValue.id === 'continuous-improvement' 
-                      ? 'https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Continuous-Improvement-in-Action.pdf'
+                      ? 'https://interactive-portfolio-instructional-designer-lxd.s3.us-east-2.amazonaws.com/Continuous-Improvement-in-Action.pdf'
                       : expandedValue.id === 'udl'
                       ? 'https://katrinahansen2018-oss.github.io/UDL-in-Action-Inclusive-Microlearning-Courses/'
                       : expandedValue.id === 'empathy'
