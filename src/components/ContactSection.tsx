@@ -54,14 +54,14 @@ const ContactSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <a 
-                href="/documents/Kate-Hansen-CV.pdf"
+                href="https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Kate-Hansen-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
                 title="Opens PDF in new tab"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download CV
+                Check My Resume
               </a>
               
               <a 
