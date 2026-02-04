@@ -229,7 +229,7 @@ const ValuesSection = () => {
                       : expandedValue.id === 'evidence-based'
                       ? 'https://d2i0gz0yrz84zc.cloudfront.net/'
                       : expandedValue.id === 'purposeful'
-                      ? '/documents/Storyboard-D2L.pdf'
+                      ? 'https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Storyboard-D2L.pdf'
                       : '/documents/Accessibility-WCAG-check.pdf'
                     }
                     target="_blank"
