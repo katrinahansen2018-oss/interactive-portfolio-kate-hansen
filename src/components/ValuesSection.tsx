@@ -223,7 +223,7 @@ const ValuesSection = () => {
                     href={expandedValue.id === 'continuous-improvement' 
                       ? 'https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Continuous-Improvement-in-Action.pdf'
                       : expandedValue.id === 'udl'
-                      ? 'https://d1i5b4vrjc3nqn.cloudfront.net/'
+                      ? 'https://katrinahansen2018-oss.github.io/UDL-in-Action-Inclusive-Microlearning-Courses/'
                       : expandedValue.id === 'empathy'
                       ? 'https://d1v4a0lthjdu12.cloudfront.net/#/'
                       : expandedValue.id === 'evidence-based'
