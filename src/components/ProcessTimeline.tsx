@@ -222,7 +222,7 @@ const ProcessTimeline = () => {
                    ) : (
                      <a 
                        href={selectedStep.id === 'design' 
-                         ? "https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/ARCS-Framework.pdf"
+                         ? "https://interactive-portfolio-instructional-designer-lxd.s3.us-east-2.amazonaws.com/ARCS-Framework.pdf"
                          : selectedStep.id === 'evaluate'
                          ? "https://d1sbe1ulbjmadi.cloudfront.net/"
                          : selectedStep.id === 'analyze'
