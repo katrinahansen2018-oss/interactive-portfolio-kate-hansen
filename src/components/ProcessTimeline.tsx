@@ -28,7 +28,7 @@ const processSteps: ProcessStep[] = [
     description: 'Creating learner-centered instructional strategies and blueprints',
     details: 'Using evidence-based design principles, I create detailed storyboards, interaction maps, and assessment strategies. This phase emphasizes Universal Design for Learning (UDL) principles to ensure accessibility and engagement for diverse learners.',
     theory: 'Merrill\'s First Principles of Instruction guide my design decisions, ensuring activation of prior knowledge, demonstration of skills, application opportunities, and integration into real-world contexts.',
-    imageNote: '/lovable-uploads/dedf4504-32fb-4cc2-bfa5-65dd5e7ce4d0.png'
+    imageNote: '/lovable-uploads/arcs-framework.png'
   },
   {
     id: 'develop',
@@ -215,7 +215,7 @@ const ProcessTimeline = () => {
                    ) : (
                      <a 
                        href={selectedStep.id === 'design' 
-                         ? "/documents/ARCS-Framework.pdf"
+                         ? "https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/ARCS-Framework.pdf"
                          : selectedStep.id === 'evaluate'
                          ? "https://d1sbe1ulbjmadi.cloudfront.net/"
                          : selectedStep.id === 'analyze'
