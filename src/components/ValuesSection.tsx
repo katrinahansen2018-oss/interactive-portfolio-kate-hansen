@@ -230,7 +230,7 @@ const ValuesSection = () => {
                       ? 'https://d2i0gz0yrz84zc.cloudfront.net/'
                       : expandedValue.id === 'purposeful'
                       ? 'https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Storyboard-D2L.pdf'
-                      : 'https://github.com/katrinahansen2018-oss/interactive-portfolio-kate-hansen/blob/main/public/documents/Accessibility-WCAG-check.pdf'
+                      : 'https://interactive-portfolio-instructional-designer-lxd.s3.us-east-2.amazonaws.com/Accessibility-Data-Privacy-and-Cybersecurity-Awareness+WCAG+check.pdf'
                     }
                     target="_blank"
                     rel="noopener noreferrer"
