@@ -54,7 +54,7 @@ const ContactSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <a 
-                href="/documents/Kate-Hansen-Resume.pdf"
+                href="https://interactive-portfolio-instructional-designer-lxd.s3.us-east-2.amazonaws.com/Kate_Hansen_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-footer"
