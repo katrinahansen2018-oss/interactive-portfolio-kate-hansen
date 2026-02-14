@@ -45,7 +45,7 @@ const ContactSection = () => {
         </div>
 
         {/* Unified Contact Panel */}
-        <div className="max-w-4xl mx-auto bg-footer-foreground/5 rounded-xl border border-footer-foreground/20 p-8 md:p-12">
+        <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12" style={{ background: 'hsla(240, 9%, 11%, 0.4)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', border: '1px solid hsla(220, 15%, 86%, 0.1)' }}>
           {/* Quick Actions Section */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-footer-foreground mb-8">
