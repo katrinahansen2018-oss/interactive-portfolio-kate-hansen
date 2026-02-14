@@ -72,8 +72,7 @@ const StickyNav = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div 
-            className="absolute top-full left-0 right-0 md:hidden z-50"
-            style={{ background: 'hsla(220, 15%, 86%, 0.6)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid hsla(220, 18%, 27%, 0.08)' }}
+            className="absolute top-full left-0 right-0 bg-background border-b border-border/50 md:hidden z-50"
             role="menu"
             aria-label="Mobile navigation menu"
           >

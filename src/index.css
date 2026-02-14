@@ -155,22 +155,19 @@
   
   .hero-button {
     @apply inline-flex items-center justify-center rounded-md font-semibold no-underline transition-all duration-200 ease-in-out;
-    background: hsla(var(--primary), 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid hsla(var(--primary), 0.3);
+    background-color: hsl(var(--primary));
     color: #ffffff;
     padding: 1rem 2rem;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
     focus-visible: outline-none;
     min-width: 280px;
   }
   
   .hero-button:hover {
-    background: hsla(var(--primary), 0.85);
+    background-color: hsl(var(--primary-hover));
     transform: scale(1.02);
-    border-color: hsla(var(--primary), 0.5);
   }
   
   .hero-button:focus-visible {
@@ -205,35 +202,24 @@
   
   /* Interactive Cards */
   .process-card {
-    @apply rounded-xl p-6 cursor-pointer transition-all duration-300;
-    background: hsla(var(--background), 0.45);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsla(var(--foreground), 0.08);
-    box-shadow: 0 8px 32px hsla(var(--foreground), 0.06);
+    @apply bg-card rounded-xl p-6 cursor-pointer transition-all duration-300 border border-border/50;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
   }
   
   .process-card:hover {
     @apply -translate-y-2 scale-[1.02];
-    background: hsla(var(--background), 0.6);
     box-shadow: var(--shadow-floating);
-    border-color: hsla(var(--primary), 0.2);
   }
   
   .value-card {
-    @apply rounded-xl p-6 cursor-pointer transition-all duration-500;
-    background: hsla(var(--secondary), 0.35);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsla(var(--secondary), 0.2);
+    @apply bg-secondary/50 rounded-xl p-6 cursor-pointer transition-all duration-500 border border-secondary/30;
   }
   
   .value-card:hover {
-    @apply scale-105;
-    background: hsla(var(--primary), 0.85);
+    @apply bg-primary scale-105;
     color: hsl(var(--primary-foreground));
     box-shadow: var(--shadow-floating);
-    border-color: hsla(var(--primary), 0.4);
   }
   
   /* Portfolio Gallery */
@@ -242,19 +228,13 @@
   }
   
   .portfolio-card {
-    @apply rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
-    background: hsla(var(--background), 0.5);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsla(var(--foreground), 0.06);
-    box-shadow: 0 8px 32px hsla(var(--foreground), 0.06);
+    @apply bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
+    box-shadow: var(--shadow-card);
   }
   
   .portfolio-card:hover {
     @apply -translate-y-3 scale-[1.02];
-    background: hsla(var(--background), 0.65);
     box-shadow: var(--shadow-floating);
-    border-color: hsla(var(--primary), 0.2);
   }
   
   .portfolio-overlay {
@@ -280,36 +260,10 @@
     box-shadow: 0 0 0 4px hsl(var(--background));
   }
   
-  /* Glassmorphism Utilities */
-  .glass {
-    background: hsla(var(--background), 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsla(var(--foreground), 0.08);
-  }
-
-  .glass-dark {
-    background: hsla(var(--footer), 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsla(var(--footer-foreground), 0.1);
-  }
-
-  .glass-card {
-    background: hsla(var(--background), 0.5);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsla(var(--foreground), 0.06);
-    box-shadow: 0 8px 32px hsla(var(--foreground), 0.08);
-  }
-
   /* Sticky Navigation */
   .sticky-nav {
-    @apply fixed top-0 left-0 right-0 z-50;
-    background: hsla(var(--background), 0.4);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid hsla(var(--foreground), 0.08);
+    @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border/50;
+    background: hsla(var(--background), 0.95);
   }
   
   /* Modal Styles */
@@ -318,12 +272,8 @@
   }
   
   .modal-content {
-    @apply rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto;
-    background: hsla(var(--background), 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid hsla(var(--foreground), 0.1);
-    box-shadow: 0 24px 64px hsla(var(--foreground), 0.15);
+    @apply bg-background rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto;
+    box-shadow: var(--shadow-floating);
   }
   
   /* Filter Buttons */
