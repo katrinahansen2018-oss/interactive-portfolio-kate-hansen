@@ -1,74 +1,19 @@
+## Remove Lovable Branding from Link Previews
 
+### 1. Update `index.html` Open Graph / Twitter metadata
+- Replace `og:image` value `https://lovable.dev/opengraph-image-p98pqg.png` with the site's own favicon `/favicon.jpg` (absolute URL: `https://interactive-portfolio-kate-hansen.lovable.app/favicon.jpg`, since social crawlers require absolute URLs).
+- Replace `twitter:image` the same way.
+- Add `<meta property="og:site_name" content="Kate Hansen" />`.
+- Add `<meta property="og:url" content="https://interactive-portfolio-kate-hansen.lovable.app/" />` so previews resolve correctly.
 
-## Fix Broken Images on GitHub Pages Deployment
+### 2. Hide the "Edit with Lovable" badge
+- Use the publish settings tool to set `hide_badge: true` (requires user approval; needs Pro plan or higher).
 
-### Problem Summary
-All images are broken on GitHub Pages because image paths don't include the required subdirectory base path.
+### 3. After deploy (manual steps for you)
+- LinkedIn Post Inspector → paste your URL → refresh.
+- Facebook Sharing Debugger → "Scrape Again" (also clears Gmail preview cache).
+- Old shares already sent will continue showing the cached Lovable image until those caches expire.
 
-### Root Cause
-- **Vite Config**: Sets `base: "/interactive-portfolio-kate-hansen/"` for production
-- **Image Paths**: Use absolute paths like `/lovable-uploads/image.png`
-- **Result on GitHub Pages**: Browser requests `https://username.github.io/lovable-uploads/...` instead of `https://username.github.io/interactive-portfolio-kate-hansen/lovable-uploads/...`
-
-### Solution
-Move images to `src/assets` and import them as ES6 modules. Vite automatically handles the base path for imported assets.
-
-### Files to Update
-
-#### 1. Copy Images to src/assets
-Create `src/assets/images/` folder and copy all required images:
-- `stakeholder-input.png` (Analyze step)
-- `arcs-framework.png` (Design step)
-- `develop-alex.png` (Develop step)
-- `implement-survey.png` (Implement step)
-- `evaluate-dashboard.png` (Evaluate step)
-- Portfolio thumbnails (3 images)
-
-#### 2. Update ProcessTimeline.tsx
-- Import images as ES6 modules at the top of the file
-- Replace string paths with imported image variables
-- This ensures Vite handles the base path correctly during build
-
-```text
-// Before
-imageNote: '/lovable-uploads/stakeholder-input.png'
-
-// After
-import stakeholderInput from '@/assets/images/stakeholder-input.png';
-...
-imageNote: stakeholderInput
-```
-
-#### 3. Update PortfolioGallery.tsx
-- Import portfolio thumbnail images as ES6 modules
-- Replace string paths with imported image variables
-
-```text
-// Before
-thumbnail: '/lovable-uploads/1244be3d-f796-4af6-a485-df2795589444.png'
-
-// After
-import cybersecurityThumb from '@/assets/images/cybersecurity-thumb.png';
-...
-thumbnail: cybersecurityThumb
-```
-
-### Technical Details
-
-**Why ES6 imports fix this:**
-- Vite processes imported assets and automatically prepends the correct base path
-- Static string paths in `public/` folder aren't processed by Vite's base path handling
-- Imported assets also get content-hashed filenames for better caching
-
-**Files Changed:**
-1. `src/assets/images/` - New folder with copied images
-2. `src/components/ProcessTimeline.tsx` - ES6 imports for 5 images
-3. `src/components/PortfolioGallery.tsx` - ES6 imports for 3 images
-
-### Alternative Quick Fix (if preferred)
-Instead of moving to assets, prefix all image paths with `import.meta.env.BASE_URL`:
-```text
-src={`${import.meta.env.BASE_URL}lovable-uploads/stakeholder-input.png`}
-```
-This is simpler but slightly more verbose in each component.
-
+### Technical notes
+- The current favicon at `public/favicon.png` exists; the uploaded `favicon.jpg` you referenced as og:image — confirm whether to (a) use the existing `/favicon.png` already in `public/`, or (b) copy the newly uploaded cat/LXD image to `public/favicon.jpg` and use that. I'll assume (b) since you specified `/favicon.jpg`.
+- Social platforms prefer 1200×630 images for previews; a square favicon will display as a small square thumbnail rather than a wide banner. That's acceptable but not ideal — let me know if you'd like a proper OG image generated later.
